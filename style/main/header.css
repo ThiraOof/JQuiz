@@ -1,0 +1,346 @@
+html{
+  overflow-y: scroll;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Noto Sans","Noto Sans SC","Noto Sans KR", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", sans-serif;
+  vertical-align: baseline;
+}
+body{
+  display: block;
+  position: relative;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555555;
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-weight: 400;
+}
+body.bg-white{
+  background: #fff;
+}
+body.bg-black{
+  background: #000;
+}
+.page{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: auto;
+}
+.page-nav{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 83px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  background: rgba(255, 255, 255, 0.5);
+}
+.page-nav.bg-white, .page-nav.bg-white.is-down, .page-nav.bg-white.is-up{
+  background: rgba(255, 255, 255, 0.5);
+}
+.page-nav.bg-black, .page-nav.bg-black.is-down, .page-nav.bg-black.is-up{
+  background: rgba(0, 0, 0, 0.5);
+}
+.page-nav.bg-black .main-menu .menu-item a{
+  color: white;
+}
+.page-nav::before{
+  content: "";
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #DDDDDD;
+  z-index: 10;
+  transition: opacity 0.1s 0s ease-out;
+  opacity: 0%;
+}
+.page-nav:hover::before{
+  opacity: 1;
+}
+.page-nav.bg-black:hover::before{
+  opacity: 1;
+  background: #393939;
+}
+.nav-content{
+  margin: 0 auto;
+  position: relative;
+  padding: 0 4.11458vw;
+  z-index: 10;
+}
+.nav-site{
+  position: relative;
+}
+.logo{
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.logo-link{
+  display: block;
+  width: 120px;
+  height: 20px;
+  background: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-black.png);
+  background-size: 120px 20px;
+}
+.page-nav.bg-black .logo-link{
+  background: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-white.png);
+  background-size: 120px 20px;
+}
+.nav-menu-site{
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+.nav-main{
+  display: inline-block;
+}
+.item-link.bg-black{
+  font-weight: bolder;
+  color: white;
+}
+.item-link.bg-white{
+  font-weight: bolder;
+  color: black;
+}
+.menu-item{
+  float: left;
+}
+.page-nav.bg-black .list-link a:hover{
+  color: white;
+  background: linear-gradient(#fff, #fff);
+  background-position: left bottom;
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+}
+.menu-item > a{
+  font-size: 18px;
+  line-height: 1.3em;
+  color: #000000;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  padding: 31px 30px 29px;
+  text-decoration: none;
+}
+.nav-lang{
+  padding-right: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  margin-top: 2px;
+}
+.lang-list{
+  list-style: none;
+}
+.lang-item{
+  float: left;
+  padding-right: 11px;
+  margin-right: 10px;
+  position: relative;
+}
+.item-link{
+  font-size: 13px;
+  line-height: 1.5em;
+  color: #A2A2A2;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  position: relative;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+.page-nav.bg-black .item-link:hover{
+  color: white;
+}
+.item-link:hover{
+  color: #000;
+}
+.item-link::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: transform 0.2s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.item-link:hover::after{
+  transform: scaleX(1);
+}
+.lang-item::after{
+  content: "";
+  width: 1px;
+  height: 9px;
+  background: #DBDBDB;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.lang-item:last-child::after{
+  content: "";
+  width: 0px;
+  height: 0px;
+}
+.lang-item:last-child{
+  padding-right: 0;
+  margin-right: 0;
+}
+.nav-bar{
+  position: absolute;
+  bottom: 0;
+  height: 0 px;
+  transition-property: width, left, height;
+  transition-duration: 0.2s;
+  z-index: 5;
+  overflow: hidden;
+}
+.nav-bar.is-view{
+  height: 5px;
+}
+.page-nav.is-view .bar-bg{
+  background: #000;
+}
+.page-nav.bg-black.is-view .bar-bg{
+  background: #fff;
+}
+.page-nav.is-down{
+  transform: translateY(0%);
+}
+.page-nav.is-up{
+  transform: translateY(-100%);
+}
+.nav-bar.is-view.bg-black .bar-bg{
+  background: #fff;
+}
+.bar-bg{
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform: skewX(45deg);
+  transition: background-color 0.2s;
+}
+.nav-sub{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding-top: 83px;
+  z-index: 5;
+  transition-property: transform, visibility, opacity;
+  transition: 0.1s ease-out;
+  border-bottom: solid 1px #DDDDDD;
+  opacity: 0%;
+  visibility: hidden;
+  transform: scale(0.9);
+}
+.page-nav:hover .nav-sub{
+  opacity: 100%;
+  visibility: visible;
+  transform: scale(1);
+}
+.page-nav:hover{
+  opacity: 100%;
+  visibility: visible;
+  transform: scale(1);
+}
+.sub-content{
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.sub-nav{
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.list:first-child{
+  border-left: solid 1px #DDDDDD;
+}
+.list{
+  display: table-cell;
+  vertical-align: top;
+  border-right: solid 1px #DDDDDD;
+  padding: 29px 21px 145px;
+}
+.page-nav.page-nav.bg-black .list{
+  border-right:  1px #393939 solid;
+}
+.page-nav.page-nav.bg-black .list:first-child{
+  border-left:  1px #393939 solid;
+}
+.menu-list{
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.list > a{
+  font-size: 16px;
+  line-height: 1.3em;
+  color: #000;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  margin-bottom: 12px;
+  transition: ease-out;
+  text-decoration: none;
+}
+.list-menu{
+  display: block;
+}
+.list-link{
+  list-style: none;
+  padding: 7px 0 5px;
+  font-size: 0;
+  line-height: 0;
+}
+.list-link a{
+  font-size: 14px;
+  line-height: 1.3em;
+  color: #777;
+  position: relative;
+  padding-bottom: 2px;
+  background: linear-gradient(#000, #000);
+  background-position: left bottom;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  margin: 0;
+  text-decoration: none;
+  transition: background-size 0.3s;
+}
+.list-link:first-child{
+  padding-top: 0;
+}
+.list-link a:hover{
+  background-size: 100% 2px;
+  color: #000;
+}
+.page-nav.bg-black .nav-sub{
+  background: #000;
+  border-color: #393939;
+}
+.page-nav.bg-black .list > a{
+  color: white;
+}

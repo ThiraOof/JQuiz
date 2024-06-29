@@ -1,0 +1,199 @@
+.careers{
+  display: block;
+  margin-bottom: 94px;
+}
+.careers.bg-black{
+  filter: invert(100%);
+}
+.careers.careers.bg-black .careers-image{
+  filter: invert(100%);
+}
+.careers-content{
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.careers-content::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.careers-head{
+  margin-bottom: 38px;
+}
+.careers-head.is-opacity{
+  transform: translateY(0);
+  opacity: 1;
+}
+.careers-title{
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+}
+.careers-text{
+  font-size: 36px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 600;
+  font-family: 'Poppins', "Noto Sans";
+  position: relative;
+  display: inline-block;
+  transition-property: transform, opacity;
+  transition:  0.6s ease-out;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.careers-head.is-opacity .careers-text{
+  transform: translateY(0);
+  opacity: 1;
+}
+.careers-slide{
+  margin: 0 -20px;
+}
+.careers-box{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.careers-main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0, 0);
+}
+.careers-item{
+  width: 50%;
+  padding: 0 20px;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  transition: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+}
+.careers-post{
+  width: 100%;
+}
+.careers-link{
+  line-height: 0;
+  display: block;
+}
+.careers-img{
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 17px;
+  background: #000;
+}
+.careers-img::after{
+  content: '';
+  display: block;
+  padding-bottom: 37.7%;
+}
+.careers-bg{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-out;
+  transform: scaleX(1);
+}
+.careers-image{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.6s ease-out;
+  transform: translateY(100%);
+}
+.careers-slide.is-opacity .careers-image{
+  transform: translateY(0);
+}
+.careers-item:nth-child(1) .careers-image{
+  transition-delay: 0s;
+}
+.careers-item:nth-child(2) .careers-image{
+  transition-delay: 0.2s;
+}
+.careers-item:nth-child(1):hover .careers-bg{
+  transform: scale(1.1);
+}
+.careers-item:nth-child(2):hover .careers-bg{
+  transform: scale(1.1);
+}
+.detail-title{
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding: 4px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.title-head{
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 600;
+  background-image: linear-gradient(#000, #000);
+  background-position: left bottom;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+  text-decoration: none;
+}
+.careers-item:nth-child(1):hover .title-head{
+  background-size: 100% 2px;
+}
+.careers-item:nth-child(2):hover .title-head{
+  background-size: 100% 2px;
+}
+.detail-sub{
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #000;
+  min-height: 2.8em;
+  word-wrap: break-word;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+a{
+  text-decoration: none;
+}
+.detail-arrow{
+  margin-top: 10px;
+  display: block;
+  width: 27px;
+  height: 10px;
+  background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-more-arrow.png);
+  background-size: 27px 10px;
+  transition: transform 0.3s;
+}
+.careers-item:nth-child(1):hover .detail-arrow{
+  transform: translateX(5px);
+}
+.careers-item:nth-child(2):hover .detail-arrow{
+  transform: translateX(5px);
+}

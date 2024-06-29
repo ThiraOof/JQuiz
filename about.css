@@ -1,0 +1,146 @@
+.valuestory{
+    width:33.33%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+.sen{
+    width:90%;
+    height:1%;
+    background-color: black;
+}
+.line{
+    border: 4px solid black;
+}
+#boxbox{
+    width:100%;
+}
+.whyhowwhat1{
+    width:30%;
+    height:75%;
+}
+.whyhowwhat2{
+    width:70%;
+    height:75%;
+}
+.arrpic{
+    width:15%;
+    height:5%;
+    background-image: url("https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-more-arrow.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+    .chacir{
+
+        width:100%;
+        height:70%;
+        background-image: url("https://www.krafton.com/wp-content/uploads/2021/07/Story-circle-e-min.png");
+    }
+
+
+    .MainNews {
+        font-family: 'Noto Sans', sans-serif;
+        padding-top: 220px;
+        overflow: hidden;
+        border: 1px solid rgb(0, 241, 229);
+    
+    }
+    .PageHeaderTitle-text {
+        font-family: 'Noto Sans', sans-serif;
+        overflow: hidden;
+        font-size: 70px;
+        transform: translateX(-10px);
+        
+        }
+        .PageHeaderTitle {
+        display:flex;
+        justify-content: space-between;
+    }
+    .About-nav-text {
+        float: right;
+    }
+    .site-container {
+    max-width: 1280px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+    overflow: hidden;
+    }
+
+    .ChallengeCircle {
+        max-width: 1280px;
+        height: 1000px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+        overflow: hidden;
+    }
+    
+    .About-nav-text {
+        font-size: 14px;
+        line-height: 1.3em;
+        margin:0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .StoryBanner-center{
+        display: block;
+        position: relative;
+        top: 20%;
+        left: 0;
+        min-width: 100%;
+        max-width: none;
+        transition-property: transform;
+    }
+    .vision-container{
+        max-width: 1280px;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+        overflow: hidden;
+    }
+    .vision-para-font{
+        font-family: 'Poppins', "Noto Sans SC";
+        font-size: 24px;
+        line-height: 1.6em;
+        color:#000;
+    }
+    .value-container {
+        max-width: 1280px;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+        overflow: hidden;
+        }
+    .value-para-font{
+        font-family: 'Poppins', "Noto Sans SC";
+        font-size: 20px;
+        line-height: 1.6em;
+        color:#000;
+        }
+    .value-head-font{
+        font-size: 30px;
+        font-family: "KRAFTON";
+        line-height: 1em;
+
+    }
+    @font-face {
+        font-family: "KRAFTON";
+        font-style: normal;
+        font-weight:400;
+        src: url("KRAFTON_FONT.woff") format("woff");
+    }
+    .value-longhon-font{
+        font-family: 'Poppins', "Noto Sans SC";
+        font-size: 22px;
+        line-height: 1.6em;
+        color:#DDDDDD;
+    }
+    .chacir-font{
+        font-family: 'Poppins', "Noto Sans SC";
+        font-size: 17px;
+        line-height: 1.6em;
+        color:#000;
+    }

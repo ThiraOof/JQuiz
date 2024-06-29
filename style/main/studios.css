@@ -1,0 +1,247 @@
+.studios{
+  padding-top:110px;
+  margin-bottom:160px;
+}
+.studio-content{
+  overflow: visible;
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 40px;
+  overflow: hidden;
+}
+.studio-head{
+  margin-bottom: 36px;
+}
+.studio-head.is-opacity .studio-text{
+  transform: translateY(0);
+  opacity: 1;
+}
+.studio-title{
+  font-size: 0;
+  line-height: 0;
+  position: relative;
+}
+.studio-text{
+  font-size: 36px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 600;
+  font-family: 'Poppins', "Noto Sans";
+  position: relative;
+  transform: translateY(101%);
+  display: inline-block;
+  transition-property: transform;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-out;
+}
+.studio-link{
+  display: block;
+    width: 27px;
+    height: 10px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-more-arrow.png);
+    background-size: 27px 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0);
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+.studio-item{
+  width: 25%;
+  float: left;
+}
+.card-link{
+  display: block;
+  padding: 49px 30px 34px;
+  min-height: 355px;
+  position: relative;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+}
+.card-logo{
+  margin-bottom: 62px;
+}
+.card-img{
+  width: 83px;
+  position: relative;
+    height: 60px;
+    display: block;
+}
+.card-img::after{
+  content: "";
+    width: 83px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-pubg.png);
+    background-size: 83px 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+}
+.card-img::before{
+  content: "";
+  width: 83px;
+  background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-pubg-w.png);
+  background-size: 83px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+}
+.studio-item:nth-child(2) .card-img::after{
+    content: "";
+    width: 60px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-bluehole.png);
+    background-size: 60px 60px;
+}
+.studio-item:nth-child(2) .card-img::before{
+    content: "";
+    width: 60px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-bluehole-w.png);
+    background-size: 60px 60px;
+}
+.studio-item:nth-child(3) .card-img::after{
+    content: "";
+    width: 78px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-rising.png);
+    background-size: 78px 60px;
+}
+.studio-item:nth-child(3) .card-img::before{
+    content: "";
+    width: 78px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-rising-w.png);
+    background-size: 78px 60px;
+}
+.studio-item:nth-child(4) .card-img::after{
+        content: "";
+    width: 182px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-striking.png);
+    background-size: 182px 60px;
+}
+.studio-item:nth-child(4) .card-img::before{
+    content: "";
+    width: 182px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-striking-w.png);
+    background-size: 182px 60px;
+}
+li{
+  list-style: none;
+}
+.card-text{
+  padding-top: 24px;
+    border-top: solid 1px
+ #000;
+}
+.card-link::after{
+  content: "";
+  width: 27px;
+  height: 10px;
+  background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-main-slide-right.png);
+  background-size: 27px 10px;
+  display: block;
+  position: absolute;
+  bottom: 34px;
+  right: 30px;
+  opacity: 0%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform: translateX(-20px);
+}
+
+.text-title{
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 600;
+  font-family: 'Poppins';
+  margin-bottom: 8px;
+}
+.text-paragraph{
+  font-size: 14px;
+  line-height: 1.4em;
+  color: #000;
+}
+.is-active.studio-item:nth-child(1) .card-link{
+  background: #F2A900;
+}
+.is-active.studio-item:nth-child(2) .card-link{
+  background: #1E82FF;
+}
+.is-active.studio-item:nth-child(3) .card-link{
+  background: #FF5C39;
+}
+.is-active.studio-item:nth-child(4) .card-link{
+  background: #3dcfa8;
+}
+.is-active.studio-item .card-img::after{
+  opacity: 0;
+}
+.is-active.studio-item .text-title, .is-active.studio-item .text-paragraph{
+  color: #fff;
+}
+.is-active.studio-item .text-title, .is-active.studio-item .text-paragraph{
+  color: #fff;
+}
+.is-active.studio-item .text-title, .is-active.studio-item .text-paragraph{
+  color: #fff;
+}
+.is-active.studio-item .text-title, .is-active.studio-item .text-paragraph{
+  color: #fff;
+}
+.is-active.studio-item .card-text{
+  border-top: solid 1px#fff;
+}
+.is-active.studio-item .card-text{
+  border-top: solid 1px#fff;
+}
+.is-active.studio-item .card-text{
+  border-top: solid 1px#fff;
+}
+.is-active.studio-item .card-text{
+  border-top: solid 1px#fff;
+}
+.is-active.studio-item .card-link::after{
+  opacity: 100%;
+  transform: translateX(0);
+}
+.bg-black{
+  color: #fff;
+}
+.is-active.studio-item .card-link.bg-black{
+  background: #fff;
+}
+.is-active.studio-item .card-link.bg-black .card-img::after{
+  opacity: 1;
+}
+.is-active.studio-item .card-link.bg-black .text-title, .is-active.studio-item .card-link.bg-black .text-paragraph{
+  color: #000;
+}
+.is-active.studio-item .card-link.bg-black .card-text{
+  border-top: solid 1px#000;
+}
+.is-active.studio-item .card-link::after{
+  opacity: 100%;
+  transform: translateX(0);
+}
+.studio-item .card-link.bg-black .card-img::after{
+  opacity: 0;
+}
+.studio-item .card-link.bg-black .text-title, .studio-item .card-link.bg-black .text-paragraph{
+  color: #fff;
+}
+.studio-item .card-link.bg-black .card-text{
+  border-top: solid 1px#fff;
+}
+.studio-item .card-link::after{
+  opacity: 100%;
+  transform: translateX(0);
+}
+.studio-card{
+  opacity: 0;
+  transition: opacity 1.6s ease-out;
+  transition-delay: 0.4s;
+}
+.studio-card.is-opacity{
+  opacity: 1;
+}

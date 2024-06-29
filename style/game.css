@@ -1,0 +1,239 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background: black;
+}
+.Game-page {
+    flex: 1 0 auto;
+    padding-top: 220px;
+    overflow: hidden;
+}
+.Game-site {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+}
+.Game-header {
+    margin-bottom: 85px;
+    width: 100%;
+}
+.Game-title-text {
+    font-size: 140px;
+    font-family: 'KRAFTON';
+    line-height: 1em;
+    margin-left: -5px;
+    color: #fff;
+}
+.Game-title-sub {
+    font-size: 40px;
+    line-height: 1.1em;
+    color: #fff;
+}
+.Game-title {
+    padding-right: 50px;
+    overflow: hidden;
+}
+.Game-nav {
+    text-align: right;
+    padding-top: 14px;
+    float: right;
+    height:0;
+}
+.Game-nav-text {
+    font-size: 14px;
+    line-height: 1.3em;
+    margin:0;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+/* Game-content */
+.Game-ui{
+    display: flex;
+    margin-top: 120px;
+    height:37px;    
+    border-bottom: 1px solid rgba(85, 85, 85, .5);
+    width: 100%;
+   
+}
+
+.Game-li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.2em;
+    padding-bottom: 16px;
+    padding-right: 80px;
+    padding-left: 2px;
+    
+    /**/
+}
+.underline{
+    background-image: linear-gradient(#fff,#fff);
+    background-position: left bottom;
+    background-size: 70% 4px;
+
+    background-repeat: no-repeat;
+    overflow:hidden;
+}
+/* card */
+.detail{
+    display: table-cell;
+    vertical-align: middle;
+    padding-right: 40px;
+}
+.cards{
+    display: table;
+    padding: 40px 0;
+    table-layout: fixed;
+    width: 100%;
+    background-image: linear-gradient(#fff,#fff);
+    background-position: left top;
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    opacity:0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+}
+.Section-line {
+    background-size: 100% 1px;
+}
+.Fade-in {
+    opacity:1;
+}
+.sub-detail{
+    display: flex;
+    margin: -2px -20px;
+    margin-top: 24px;
+}
+.cards-img{
+    display: table-cell;
+    vertical-align: middle;
+    width: 48.4%;
+    overflow:hidden;
+}
+.Game-cards{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.detail h3{
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: bold;
+} 
+
+.borderT{
+    position: relative;
+}
+/*.borderT::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 1200px;
+    height: 1px;
+}*/
+
+.Card-img-size {
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+    transform: translateY(100%);
+}
+.Img-slideup {
+    transform: translateY(0%);
+}
+.cards:hover .Card-img-size {
+    transform: scale(1.06);
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+.card-box{
+    position: relative;
+    overflow: hidden;
+}
+.text-site{
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform: translateX(-100%);
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-delay: 0.3s;
+    transition-timing-function: ease-out;
+}
+.Text-slide {  
+    transform: translateX(0%);
+}
+.text-site::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: calc(100% + 20px);
+    height: 100%;
+    background: black;
+    transform: skewX(20deg);
+    z-index: -1;
+}
+
+.text-site .text{
+    font-size: 14px;
+    line-height: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    padding: 6px 22px 6px 11px;
+}
+.arrow{
+    background: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-post-arrow.png);
+    margin-top: 93px;
+    width: 40px;
+    height: 14px;
+    background-size: 40px 14px;
+}
+.center::after{
+    content: '';
+    width: 1px;
+    height: 13px;
+    background: #707070;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.subLeft, .subRight{
+    position: relative;
+    padding: 2px 20px;
+    float: left;
+    overflow: hidden;
+}
+.subRight span{
+    margin-right: 17px;
+}
+.Game-content-title {
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background-image: linear-gradient(#fff,#fff);
+    background-position: left bottom;
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    transition-property: background-size;
+    transition-duration: 0.3s;
+}
+.cards:hover .Game-content-title {
+        background-size: 100% 2px;
+}

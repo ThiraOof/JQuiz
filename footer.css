@@ -1,0 +1,198 @@
+/*-----------------Footer-----------------------------------*/
+*{
+    margin:0;
+}
+.Footer {
+    background-color: #000;
+    padding: 35px 0 63px;
+    position: relative;
+}
+.Footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 80px;
+}
+.Footer-menu {
+    padding-bottom: 47px;
+}
+.Footer-copy {
+    position: relative;
+    padding-top: 68px;
+    border-top: solid 1px #393939;
+}
+.Footer-menu-left {
+    width: 70%;
+    float: left;
+    padding-right: 5px;
+    margin: 0 -17px;
+}
+.Footer-menu-left-text {
+    padding: 0px 17px;
+    font-size: 0;
+    line-height: 0;
+    float: left;
+    position: relative;
+}
+.Footer-menu-left-text:after {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #393939;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.Footer-menu-left-text:nth-child(5):after {
+    width: 0px;
+}
+
+.Footer-text {
+    font-size: 13px;
+    line-height: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+.Footer-text:hover {
+    text-decoration: underline;
+
+}
+.Footer-logo-right {
+    float: right;
+}
+.Footer-logo-frame {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+.Logo-facebook {
+    display: block;
+    text-indent: -99999px;
+    width: 9px;
+    height: 18px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-facebook.png);
+    background-size: 9px 18px; /*9 18*/
+}
+.Logo-youtube {
+    display: block;
+    text-indent: -99999px;
+    width: 22px;
+    height: 15px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-youtube.png);
+    background-size: 22px 15px; /*9 18*/
+}
+.Logo-blog {
+    display: block;
+    text-indent: -99999px;
+    width: 29px;
+    height: 19px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-Blog.png);
+    background-size: 29px 19px; /*9 18*/
+}
+.Logo-naver {
+    display: block;
+    text-indent: -99999px;
+    width: 16px;
+    height: 15px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-naver.png);
+    background-size: 16px 15px; /*9 18*/
+}
+.Logo-instargram {
+    display: block;
+    text-indent: -99999px;
+    width: 18px;
+    height: 18px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-instagram.png);
+    background-size: 18px 18px; /*9 18*/
+}
+.Logo-linkedin {
+    display: block;
+    text-indent: -99999px;
+    width: 17px;
+    height: 17px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-sns-linkedin.png);
+    background-size: 17px 17px; /*9 18*/
+}
+.Footer-copy-info-logo {
+    width: 120px;
+    height: 20px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-white.png);
+    background-size: 120px 20px;
+    margin-bottom: 12px;
+}
+.Footer-copy-info-text {
+    font-size: 12px;
+    line-height: 1.4em;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255,255,255,0.4);
+    padding-right: 245px;
+}
+.Footer-family {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    width: 225px;
+}
+.Footer-family-text {
+    font-size: 13px;
+    line-height: 1.2em;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 40px 10px 0;
+    border-bottom: solid 1px #FFFFFF;
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 36px;
+    text-transform: uppercase;
+}
+.Footer-family-text:hover {
+    color: #fff;
+}
+.Footer-family-img {
+    width: 11px;
+    height: 11px;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-plus.png);
+    background-size: 11px 11px;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    transition-property: transform;
+    transition-duration: 0.2s;
+}
+.Menu-family {
+    position: absolute;
+    bottom: 42px;
+    left: 0;
+    right: 0;
+    border: solid 1px #fff;
+    background-color: #000;
+    padding: 10px 0;
+    z-index: 10;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.2s;
+    opacity:0%;
+    height: 0px;
+    transform-origin: bottom;
+}
+.Menu-family-list {
+    padding: 5px 11px;
+    font-size: 0;
+    line-height: 0;
+}
+.Menu-family-list > a {
+    font-size: 13px;
+    line-height: 1.3em;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}

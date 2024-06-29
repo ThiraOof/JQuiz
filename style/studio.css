@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap%27');
+*{
+    font-family: 'Poppins', "Noto Sans", "Noto Sans KR", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    font-weight: 400;
+    font-family: "Noto Sans";
+}
+h3{
+    margin: 0;
+}
+/*--------------------- Studio Content -----------------------*/
+/*--------------------- Studio Header -----------------------*/
+.Studio-main {
+    flex: 1 0 auto;
+    padding-top: 220px;
+    overflow: hidden;
+}
+.Studio-site {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+}
+.Studio-header {
+    width: 1200px;
+    margin-bottom: 85px;
+}
+.Studio-title {
+    padding-right: 50px;
+    overflow: hidden;
+}
+.Studio-title-text {
+    font-family: "Noto Sans", "Noto Sans SC", "Noto Sans KR", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 70px;
+    line-height: 1.3em;
+    color: #000;
+    font-weight: bold;
+}
+.Studio-nav {
+    text-align: right;
+    padding-top: 14px;
+    float: right;
+    height:0px;
+}
+.Studio-nav-text {
+    font-size: 14px;
+    line-height: 1.3em;
+    margin:0;
+    color: #000;
+    font-family: 'Poppins', "Noto Sans", "Noto Sans KR", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", sans-serif;;
+    display: block;
+    text-transform: capitalize;
+}
+h2.Studio-title-text {
+    margin:0;
+}
+/*--------------------- Studio Card -----------------------*/
+.card{
+    display: table;
+    width: 1200px;
+    padding: 3.4% 0;
+    position: relative;
+    background: #F7F7F7;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    transition: width 0.4s ease-out;
+}
+.card:nth-child(1):before{
+    background: #F2A900;
+}
+.card:nth-child(2):before{
+    background: #2E82FE;
+}
+.card:nth-child(3):before{
+    background: #FF5C39;
+}
+.card:nth-child(4):before{
+    background: #3dcfa8;
+}
+.card:nth-child(5):before{
+    background: #000;
+}
+.card:hover::before{
+    width: 100%;
+}
+.card:hover .li, .card:hover h3, .card:hover p{
+    color: white;
+}
+.card:hover img, .card:hover .split{
+    filter: brightness(1);
+    color: white;
+}
+
+.box-img{
+    width: 31.66%;
+    display: table-cell;
+    position: relative;
+    padding-top: 3%;
+
+}
+.card-img img{
+    filter: brightness(0);
+    object-position: center;
+}
+.text-card{
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    height:152px;
+}
+
+.ul{
+    display: flex;
+}
+.split{
+    margin: 0 12px;
+    transform:translateY(-3px);
+    font-size: 10px;
+
+}
+.text-card h3{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: #000;
+font-family: 'Poppins', sans-serif;
+}
+.li {
+    color: #000;
+    font-size: 12px;
+    line-height: 1.2em;
+    transition-property: color;
+    transition-duration: 0.1s;
+    transition-delay: 0.05s;
+    
+}
+.text-card p{
+    margin-top:10px;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.6em;
+    transition-property: color;
+    transition-duration: 0.1s;
+    transition-delay: 0.05s;
+    font-family: "Noto Sans";
+}
+.card::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 14px;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1;
+    margin-right: 0;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-post-arrow-b.png);
+    background-size: 40px 14px;
+    transition-property: background-image, transform;
+    transition-duration: 0.2s;
+    transition-delay: 0.2s;
+}
+.card:hover.card::after{
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-main-slide-right.png);
+    transform:translateX(5px);}
+
+/* btn-page */
+.btn-page{
+    width: 68px;
+    height: 68px;
+    background: black;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.btn-page::after{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: '';
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    width: 17px;
+    height: 7px;
+    top: 50%;
+    left: 50%;
+    background: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-top-arrow.png);
+    transform: translate(-50%, -50%);
+    background-size: 17px 7px;
+}
+.lock{
+    position: absolute;
+    bottom: auto;
+    top: -82px;
+    right: 20px;
+}

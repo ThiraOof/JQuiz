@@ -1,0 +1,272 @@
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="studio.css">
+
+
+  <title>STUDIO | KRAFTON</title>
+  <link rel="shortcut icon" href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/android-chrome-256x256.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/favicon-32x32.png">
+</head>
+
+<body id="body" class="changeBg">
+  <header>
+    <div class="nav" onmouseover="nav()">
+      <div class="nav-site">
+        <div class="nav-logo"></div>
+        <div class="nav-menu">
+          <a href="" class="menu-item">About</a>
+          <a href="" class="menu-item">Studios</a>
+          <a href="" class="menu-item">Games</a>
+          <a href="" class="menu-item">Careers</a>
+          <a href="" class="menu-item">IR</a>
+          <a href="" class="menu-item">News</a>
+        </div>
+        <div class="nav-lang">
+          <a href="" class="lang-item">KO</a><span class="nav-split">|</span>
+          <a href="" class="lang-item">EN</a><span class="nav-split">|</span>
+          <a href="" class="lang-item">CN</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-sub" id="nav-sub">
+      <div class="sub-menu">
+        <b><a href="">About</a></b>
+        <a href="">KRAFTON Story</a>
+        <a href="">Our Footprints</a>
+        <a href="">Our Challenges</a>
+        <a href="">Brand Resource Center</a>
+      </div>
+      <div class="sub-menu">
+        <b><a href="">Studios</a></b>
+        <a href="">PUBG STUDIOS</a>
+        <a href="">Bluehole Studio</a>
+        <a href="">RisingWings</a>
+        <a href="">Striking Distance Studios</a>
+        <a href="">Dreamotion</a>
+      </div>
+      <div class="sub-menu">
+        <b><a href="">Games</a></b>
+        <a href="">PUBG: BATTLEGROUNDS</a>
+        <a href="">PUBG: NEW STATE</a>
+        <a href="">TERA</a>
+        <a href="">ELYON</a>
+        <a href="">MISTOVER</a>
+        <a href="">Castle Craft: World War</a>
+        <a href="">GOLF KING: WORLD TOUR</a>
+        <a href="">BOWLING KING</a>
+        <a href="">MINI GOLF KING</a>
+        <a href="">Ronin: The Last Samurai</a>
+        <a href="">Road to Valor: World War II</a>
+      </div>
+      <div class="sub-menu">
+        <b><a href="">Careers</a></b>
+        <a href="">People</a>
+        <a href="">Life</a>
+        <a href="">Jobs</a>
+      </div>
+      <div class="sub-menu">
+        <b><a href="">IR</a></b>
+        <a href="">GovernanceDisclosure</a>
+        <a href="">Financial Information</a>
+        <a href="">Investor Events</a>
+      </div>
+      <div class="sub-menu">
+        <b><a href="">News</a></b>
+        <a href="">Press</a>
+      </div>
+    </div>
+    <div id="primary" class="content-area">
+      <div id="main" class="site-main">
+        <div class="pagecontain">
+          <div class="PageHeader">
+            <div class="BreadcrumbBox">
+
+
+            </div>
+            <div class="MainStu">
+              <div class="allstu">
+                <h1 class="Page-header">Studios</h1>
+
+                <div class="stu">
+                  <div class="picstu">
+                    <div class="pubgstupic">
+                    </div>
+                  </div>
+                  <div class="contstu">
+                    <h6>DEVELOPER | PUBLISHER</h6>
+                    <h4>PUBG STUDIOS</h4>
+
+                    <p>More than just a game, PUBG is a cultural phenomenon</p>
+                  </div>
+                </div>
+                <br>
+                <div class="stu">
+                  <div class="picstu"></div>
+                  <div class="contstu"></div>
+                </div>
+                <br>
+                <div class="stu">
+                  <div class="picstu"></div>
+                  <div class="contstu"></div>
+                </div>
+                <br>
+                <div class="stu">
+                  <div class="picstu"></div>
+                  <div class="contstu"></div>
+                </div>
+                <br>
+                <div class="stu">
+                  <div class="picstu"></div>
+                  <div class="contstu"></div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+            <script src="https://cdn.jsde/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+              crossorigin="anonymous"></script>
+            <script src="script.js"></script>
+</body>
+
+</html> -->
+body {
+    height: 100vh;
+}
+
+.MainStu {
+    font-family: 'Noto Sans', sans-serif;
+    margin-bottom: 88px;
+    padding: 0 40px;
+    flex: 1 0 auto;
+    padding-top: 220px;
+    border: 1px solid blue;
+}
+
+.site-container {
+    max-width: 1280px;
+    height: 455px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+    overflow: hidden;
+}
+
+.stu {
+    position: relative;
+    display: flex;
+    height: 233.55px;
+    width: 100%;
+    background: none;
+    transition: all 0.5s;
+    z-index: 1000;
+}
+.stu::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    transition: all 0.5s;
+    z-index: -50;
+    background: red;
+}
+.stu:hover::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    z-index: -50;
+    background: red;
+}
+.stu:hover .contstu{
+    color: white;
+}
+.stu:hover .pubgstupic{
+    filter: brightness(100%);
+}
+
+.Page-header h1 {
+    font-size: 70px;
+    line-height: 1.3em;
+    color: #000;
+    font-weight: bold;
+}
+
+.allstu {
+    max-width: 1200px;
+    height: 1300px;
+    border: 1px solid rgb(100, 21, 19);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-sub {
+    z-index: -1;
+}
+
+.site-main {
+    height: 100vh;
+}
+
+.picstu {
+    width: 33%;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pubgstupic {
+    position: absolute;
+    width: 100px;
+    height: 72.02px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.krafton.com/wp-content/themes/krafton/assets/img/logo/logo-pubg-w.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 50;
+    filter: brightness(0%);
+}
+
+.contstu {
+    width: 820.09px;
+    height: 151.95px;
+
+}

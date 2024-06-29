@@ -1,0 +1,52 @@
+.card{
+    position: relative;
+    display: flex;
+    border: 1px solid rgb(0, 241, 229);
+    height: 233.55px;
+    width: 100%;
+    background: none;
+    transition: all 0.5s;
+}
+.img-card {
+    position: absolute;
+    width: 100px;
+    height: 72.02px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://www.krafton.com/wp-content/uploads/2021/06/studios-pubg-logo-b.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background: white;
+    z-index: 50;
+    filter: brightness(100%);
+}
+.card-body{
+    width: 820.09px;
+    height: 151.95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover::after{
+    content: 'test';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: all 0.5s;
+    z-index: -50;
+}
+.card:hover .card-body{
+    color: white;
+}
+.card:hover .pubgstupic{
+    background: red;
+    filter: brightness(0%);
+    color: white;
+}
+
+/* <!-- มาทำไมให้อายบ้านนาเล่านวนน้องบ่ต้องกลับคืนมา --> */

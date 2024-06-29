@@ -1,0 +1,6252 @@
+@charset "UTF-8";
+
+    /*=========================================================
+	Scroll Event Table
+=========================================================*/
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .ScrollEvent {
+            overflow: hidden;
+            position: relative;
+            margin-left: -6.25vw;
+            margin-right: -6.25vw;
+            padding-left: 6.25vw;
+            padding-right: 6.25vw;
+            padding-bottom: 1px;
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .is-Hidden.ScrollEvent {
+            overflow-x: scroll;
+        }
+
+        .ScrollEvent.is-Scroll .ScrollEvent-inner {
+            padding-right: 6.25vw;
+            display: inline-block;
+        }
+
+        .ScrollEvent-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: none;
+        }
+
+        .is-Hidden.ScrollEvent .ScrollEvent-bg {
+            display: none !important;
+        }
+
+        .is-View.is-Scroll.ScrollEvent {
+            height: 50vw;
+        }
+
+        .is-Scroll.ScrollEvent .ScrollEvent-bg {
+            display: block;
+        }
+
+        .ScrollEvent-close {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding-bottom: 4vw;
+        }
+
+        .ScrollEvent-close:before {
+            content: "";
+            width: 8vw;
+            height: 8vw;
+            background-image: url(../img/bg/ico-scroll-ani.png);
+            background-size: 8vw 8vw;
+            display: block;
+            transform: translateX(0%);
+            animation-duration: 1.4s;
+            animation-name: ScrollEvent;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        .ScrollEvent-close:after {
+            content: "터치 후 스크롤 하세요.";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            display: block;
+            font-size: 2.1vw;
+            color: #000;
+            line-height: 1.2em;
+            white-space: nowrap;
+            font-weight: 500;
+            animation-duration: 1.4s;
+            animation-name: ScrollEventText;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        html[lang="en-US"] .ScrollEvent-close:after {
+            content: "Touch and scroll.";
+        }
+
+        html[lang="zh-CN"] .ScrollEvent-close:after {
+            content: "Touch and scroll.";
+        }
+
+        @keyframes ScrollEvent {
+            0% {
+                transform: translateX(0px);
+            }
+
+            50% {
+                transform: translateX(-20px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+        }
+
+        @keyframes ScrollEventText {
+            0% {
+                transform: translateX(-50%) scale(1);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(0.8);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(1);
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .ScrollEvent-close {
+            padding-bottom: 7vw;
+        }
+
+        .ScrollEvent-close:before {
+            width: 14vw;
+            height: 14vw;
+            background-size: 14vw 14vw;
+        }
+
+        .ScrollEvent-close:after {
+            font-size: 3.4vw;
+        }
+    }
+
+    /*=========================================================
+	CategoryTabBlack
+=========================================================*/
+    .CategoryTabBlack {
+        position: relative;
+    }
+
+    .CategoryTabBlack-list {
+        position: relative;
+    }
+
+    .CategoryTabBlack-list:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #393939;
+    }
+
+    .CategoryTabBlack-list:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .CategoryTabBlack-item {
+        float: left;
+        margin-right: 29px;
+    }
+
+    .CategoryTabBlack-item:last-child {
+        margin-right: 0;
+    }
+
+    .CategoryTabBlackItem-link {
+        display: block;
+        font-size: 18px;
+        line-height: 1.2em;
+        color: #fff;
+        padding-bottom: 16px;
+        padding-right: 50px;
+        padding-left: 2px;
+    }
+
+    .CategoryTabBlackBar {
+        position: absolute;
+        bottom: 0;
+        height: 4px;
+        transition-property: width, left;
+        transition-duration: 0.2s;
+        z-index: 500;
+        overflow: hidden;
+    }
+
+    .CategoryTabBlackBar-bg {
+        position: absolute;
+        top: 0;
+        left: -2px;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transform: skewX(45deg);
+    }
+
+    .CategoryTabBlack-item.is-Current .CategoryTabBlackItem-link {
+        font-weight: bold;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .CategoryTabBlack-item {
+            margin-right: 2.23076vw;
+        }
+
+        .CategoryTabBlackItem-link {
+            font-size: 1.3846vw;
+            padding-bottom: 1.23076vw;
+            padding-right: 3.8461vw;
+            padding-left: 0.15384vw;
+        }
+
+        .CategoryTabBlackBar {
+            height: 0.30769vw;
+        }
+
+        .CategoryTabBlackBar-bg {
+            left: -0.1538vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .CategoryTabBlack-item {
+            margin-right: 3.23076vw;
+        }
+
+        .CategoryTabBlackItem-link {
+            font-size: 1.7846vw;
+            padding-bottom: 1.63076vw;
+            padding-right: 4.2461vw;
+            padding-left: 0.45384vw;
+        }
+
+        .CategoryTabBlackBar {
+            height: 0.40769vw;
+        }
+
+        .CategoryTabBlackBar-bg {
+            left: -0.1538vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .CategoryTabBlack {
+            margin-left: -6.25vw;
+            margin-right: -6.25vw;
+        }
+
+        .CategoryTabBlack-list {
+            padding: 0 6.25vw;
+        }
+
+        .CategoryTabBlack-item {
+            margin-right: 5.23076vw;
+        }
+
+        .CategoryTabBlackItem-link {
+            font-size: 4.0846vw;
+            padding-bottom: 3.63076vw;
+            padding-right: 5.2461vw;
+            padding-left: 0.65384vw;
+        }
+
+        .CategoryTabBlackBar {
+            height: 0.74769vw;
+        }
+
+        .CategoryTabBlackBar-bg {
+            left: -0.3538vw;
+        }
+    }
+
+
+    /*=========================================================
+	CategoryPostItem
+=========================================================*/
+    .CategoryPostItem-link {
+        display: block;
+        padding: 40px 0;
+    }
+
+    .CategoryPostItem-inner {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .CategoryPostItemThumnail {
+        display: table-cell;
+        vertical-align: middle;
+        width: 48.4%;
+    }
+
+    .CategoryPostItemThumnail-inner {
+        line-height: 0;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+    }
+
+    .CategoryPostItemThumnail-inner:after {
+        content: "";
+        display: block;
+        padding-bottom: 45.4%;
+    }
+
+    .CategoryPostItemThumnail-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateY(100%);
+    }
+
+    .CategoryPostItemThumnail-tag {
+        display: block;
+        position: absolute;
+        top: 18px;
+        left: 0;
+        z-index: 5;
+        overflow: hidden;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-delay: 0.3s;
+        transition-timing-function: ease-out;
+        transform: translateX(-100%);
+    }
+
+    .CategoryPostItemThumnail-tag:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -30px;
+        width: calc(100% + 20px);
+        height: 100%;
+        background-color: #000;
+        transform: skewX(20deg);
+        z-index: -1;
+    }
+
+    .CategoryPostItemThumnail-tagbar {
+        display: block;
+        font-size: 14px;
+        line-height: 1.2em;
+        color: #fff;
+        font-family: 'Poppins';
+        font-weight: 500;
+        padding: 6px 22px 6px 11px;
+        /* text-transform:uppercase; */
+    }
+
+    .CategoryPostItemCont {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 40px;
+    }
+
+    .CategoryPostItemContTitle {
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .CategoryPostItemContTitle-text {
+        font-size: 36px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: bold;
+        background-image: linear-gradient(#fff, #fff);
+        background-position: left bottom;
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        transition-property: background-size;
+        transition-duration: 0.3s;
+    }
+
+    .CategoryPostItemCont-sub {
+        font-size: 18px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+        margin-top: 12px;
+    }
+
+    .CategoryPostItemContMeta {
+        margin-top: 24px;
+    }
+
+    .CategoryPostItemContMeta-list {
+        overflow: hidden;
+        margin: -2px -20px;
+    }
+
+    .CategoryPostItemContMeta-item {
+        padding: 2px 20px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .CategoryPostItemContMeta-item:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 13px;
+        background-color: #707070;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .CategoryPostItemContMeta-item:last-child:after {
+        display: none;
+    }
+
+    .CategoryPostItemContMeta-text {
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #fff;
+        display: block;
+        float: left;
+        margin-right: 17px;
+    }
+
+    .CategoryPostItemContMeta-text:last-child {
+        margin-right: 0;
+    }
+
+    .CategoryPostItemCont-arrow {
+        margin-top: 93px;
+        width: 40px;
+        height: 14px;
+        background-image: url(../img/icon/ico-post-arrow.png);
+        background-size: 40px 14px;
+        transform: translateX(-20px);
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    @media screen and (min-width: 1025px) {
+        .CategoryPostItem-link:hover .CategoryPostItemThumnail-img {
+            transform: scale(1.06) translateX(-100%);
+        }
+
+
+        .CategoryPostItem-link:hover .CategoryPostItemContTitle-text {
+            background-size: 100% 2px;
+        }
+
+        .CategoryPost-item.is-Opacity .CategoryPostItem-link:hover .CategoryPostItemThumnail-img {
+            transform: scale(1.06) translateY(0px);
+        }
+    }
+
+    /* CategoryPostItem:Animation
+=========================================================*/
+    .CategoryPost-item.is-Opacity .CategoryPostItemCont-arrow {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    .CategoryPost-item.is-Opacity .CategoryPostItemThumnail-img {
+        transform: scale(1) translateY(0px);
+    }
+
+    .CategoryPost-item.is-Opacity .CategoryPostItemThumnail-tag {
+        transform: translateX(0px);
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .CategoryPostItem-link {
+            padding: 3.0769vw 0;
+        }
+
+        .CategoryPostItemThumnail-tag {
+            top: 1.3846vw;
+        }
+
+        .CategoryPostItemThumnail-tag:before {
+            left: -2.3076vw;
+            width: calc(100% + 1.5384vw);
+        }
+
+        .CategoryPostItemThumnail-tagbar {
+            font-size: 1.0769vw;
+            padding: 0.4615vw 1.6923vw 0.4615vw 0.8461vw;
+        }
+
+        .CategoryPostItemCont {
+            padding-right: 3.0769vw;
+        }
+
+        .CategoryPostItemContTitle-text {
+            font-size: 2.7692vw;
+        }
+
+        .CategoryPostItemCont-sub {
+            font-size: 1.3846vw;
+            margin-top: 0.92307vw;
+        }
+
+        .CategoryPostItemContMeta {
+            margin-top: 1.8461vw;
+        }
+
+        .CategoryPostItemContMeta-list {
+            margin: -0.6153vw -1.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item {
+            padding: 0.6153vw 1.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item:after {
+            content: "";
+            height: 1vw;
+            margin-top: 1px;
+        }
+
+        .CategoryPostItemContMeta-text {
+            font-size: 1.2307vw;
+            margin-right: 1.3076vw;
+        }
+
+        .CategoryPostItemCont-arrow {
+            margin-top: 7.1538vw;
+            width: 3.0769vw;
+            height: 1.0769vw;
+            background-size: 3.0769vw 1.0769vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .CategoryPostItem-link {
+            padding: 3.0769vw 0;
+        }
+
+        .CategoryPostItemThumnail-tag {
+            top: 1.3846vw;
+        }
+
+        .CategoryPostItemThumnail-tag:before {
+            left: -2.3076vw;
+            width: calc(100% + 1.5384vw);
+        }
+
+        .CategoryPostItemThumnail-tagbar {
+            font-size: 1.4769vw;
+            padding: 0.6615vw 1.6923vw 0.6615vw 0.8461vw;
+        }
+
+        .CategoryPostItemCont {
+            padding-right: 3.0769vw;
+        }
+
+        .CategoryPostItemContTitle-text {
+            font-size: 2.7692vw;
+        }
+
+        .CategoryPostItemCont-sub {
+            font-size: 1.5846vw;
+            margin-top: 0.9153vw;
+        }
+
+        .CategoryPostItemContMeta {
+            margin-top: 2.8461vw;
+        }
+
+        .CategoryPostItemContMeta-list {
+            margin: -0.6153vw -1.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item {
+            padding: 0.6153vw 1.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item:after {
+            content: "";
+            height: 1vw;
+            margin-top: 1px;
+        }
+
+        .CategoryPostItemContMeta-text {
+            font-size: 1.4307vw;
+            margin-right: 1.3076vw;
+        }
+
+        .CategoryPostItemCont-arrow {
+            margin-top: 7.1538vw;
+            width: 3.0769vw;
+            height: 1.0769vw;
+            background-size: 3.0769vw 1.0769vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .CategoryPostItem-link {
+            padding: 16.0769vw 0;
+            padding-top: 51.8vw;
+            position: relative;
+        }
+
+        .CategoryPostItemThumnail-tag {
+            top: 3.3846vw;
+        }
+
+        .CategoryPostItemThumnail-tag:before {
+            left: -2.3076vw;
+            width: calc(100% + 0.5384vw);
+        }
+
+        .CategoryPostItemThumnail-tagbar {
+            font-size: 3.5769vw;
+            padding: 1.8615vw 4.6923vw 1.6615vw 2.8461vw;
+        }
+
+        .CategoryPostItemCont {
+            padding: 0 6.25vw;
+            display: block;
+        }
+
+        .CategoryPostItemContTitle-text {
+            font-size: 6.7692vw;
+        }
+
+        .CategoryPostItemCont-sub {
+            font-size: 3.6846vw;
+            margin-top: 1.6153vw;
+        }
+
+        .CategoryPostItemContMeta {
+            margin-top: 5.8461vw;
+        }
+
+        .CategoryPostItemContMeta-list {
+            margin: -0.8153vw -2.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item {
+            padding: 0.8153vw 2.5384vw;
+        }
+
+        .CategoryPostItemContMeta-item:after {
+            content: "";
+            height: 3.2vw;
+        }
+
+        .CategoryPostItemContMeta-text {
+            font-size: 3.6307vw;
+            margin-right: 3.4076vw;
+        }
+
+        .CategoryPostItemCont-arrow {
+            margin-top: 10.1538vw;
+            width: 9.0769vw;
+            height: 2.5769vw;
+            background-size: 9.0769vw 2.5769vw;
+            ;
+        }
+
+        .CategoryPostItem-inner {
+            display: block;
+        }
+
+        .CategoryPostItemThumnail {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .CategoryPost-item:last-child .CategoryPostItem-link {
+            padding-bottom: 0 !important;
+        }
+    }
+
+
+    /*=========================================================
+	Studio
+=========================================================*/
+    .PageContStudio {
+        overflow: hidden;
+    }
+
+    .Studio-container {
+        overflow: visible;
+    }
+
+    /*	Studio:Header
+=========================================================*/
+    .PageHeaderStudioMeta {
+        margin-bottom: 36px;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .PageHeaderStudioMeta-item {
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #000;
+        display: inline-block;
+        padding-right: 34px;
+        margin-right: 33px;
+        position: relative;
+    }
+
+    .PageHeaderStudioMeta-item:last-child {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .PageHeaderStudioMeta-item:after {
+        content: "";
+        width: 1px;
+        height: 14px;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .PageHeaderStudioMeta-item:last-child:after {
+        display: none;
+    }
+
+    .PageHeaderStudio-title {
+        font-size: 82px;
+        line-height: 1em;
+        color: #000;
+        font-weight: bold;
+        font-family: 'Poppins';
+        padding-bottom: 10px;
+    }
+
+    .PageHeaderStudiotitle-sub {
+        font-size: 24px;
+        line-height: 1.5em;
+        color: #000;
+        margin-top: 15px;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .PageHeaderStudioMeta {
+            margin-bottom: 2.769vw;
+        }
+
+        .PageHeaderStudioMeta-item {
+            font-size: 1.23076vw;
+            padding-right: 2.6153vw;
+            margin-right: 2.5384vw;
+        }
+
+        .PageHeaderStudioMeta-item:after {
+            height: 1.076vw;
+        }
+
+        .PageHeaderStudio-title {
+            font-size: 6.3076vw;
+            padding-bottom: 0.8153vw;
+        }
+
+        .PageHeaderStudiotitle-sub {
+            font-size: 1.84615vw;
+            margin-top: 1.15384vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .PageHeaderStudioMeta {
+            margin-bottom: 2.769vw;
+        }
+
+        .PageHeaderStudioMeta-item {
+            font-size: 1.63076vw;
+            padding-right: 2.6153vw;
+            margin-right: 2.5384vw;
+        }
+
+        .PageHeaderStudioMeta-item:after {
+            height: 1.176vw;
+            margin-top: -0.1vw;
+        }
+
+        .PageHeaderStudio-title {
+            font-size: 10.769vw;
+            padding-bottom: 1.5153vw;
+        }
+
+        .PageHeaderStudiotitle-sub {
+            font-size: 3.0769vw;
+            margin-top: 1.15384vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .PageHeaderStudioMeta {
+            margin-bottom: 3.269vw;
+        }
+
+        .PageHeaderStudioMeta-item {
+            font-size: 3.3769vw;
+            padding-right: 2.6153vw;
+            margin-right: 2.5384vw;
+        }
+
+        .PageHeaderStudioMeta-item:after {
+            height: 2.276vw;
+        }
+
+        .PageHeaderStudio-title {
+            font-size: 13.069vw;
+            padding-bottom: 1.9vw;
+        }
+
+        .PageHeaderStudiotitle-sub {
+            font-size: 4.0769vw;
+            margin-top: 2.45384vw;
+        }
+    }
+
+    /*	Studio:StudiosHeader
+=========================================================*/
+    .StudiosHeader {
+        position: relative;
+        margin-bottom: 97px;
+    }
+
+    .StudiosHeaderBg {
+        position: relative;
+    }
+
+    .StudiosHeaderBg:after {
+        content: "";
+        display: block;
+        padding-bottom: 31.6%;
+    }
+
+    .StudiosHeaderBg-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .StudiosHeaderBg-center {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        min-width: 100%;
+    }
+
+    .StudiosHeaderBg-img {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-width: none;
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .StudiosHeaderBg-img {
+            max-height: calc(100% + 20vh);
+        }
+    }
+
+    body.Safari .StudiosHeaderBg-img {
+        transition-duration: 0s;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .StudiosHeaderBg-img {
+            transition-duration: 0s;
+        }
+    }
+
+    .StudiosHeaderBg {
+        animation-name: StudiosHeader;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        opacity: 0;
+    }
+
+    .StudiosHeaderLogo {
+        position: absolute;
+        bottom: -50%;
+        right: 0;
+        z-index: 10;
+        width: 405px;
+        height: 291px;
+        transition-property: opacity, transform;
+        transition-duration: 0.4s;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .is-logoOpacity.StudiosHeaderLogo {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .StudiosHeaderLogo {
+            transform: translateY(30px) !important;
+        }
+
+        .is-logoOpacity.StudiosHeaderLogo {
+            transform: translateY(0px) !important;
+        }
+    }
+
+    .bg-pubg {
+        background-color: #F2A900;
+    }
+
+    .bg-bluehole {
+        background-color: #2E82FE;
+    }
+
+    .bg-risingwings {
+        background-color: #FF5C39;
+    }
+
+    .bg-striking {
+        background-color: #3dcfa8;
+    }
+
+    .bg-dreammotion {
+        background-color: #000000;
+    }
+
+    .bg-bluehole .StudiosHeaderLogo-img {
+        max-width: 275px;
+    }
+
+    .bg-risingwings .StudiosHeaderLogo-img {
+        max-width: 141px;
+    }
+
+    .bg-striking .StudiosHeaderLogo-img {
+        max-width: 213px;
+    }
+
+    .bg-dreammotion .StudiosHeaderLogo-img {
+        max-width: 240px;
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .bg-bluehole .StudiosHeaderLogo-img {
+            max-width: 16.1538vw;
+        }
+
+        .bg-risingwings .StudiosHeaderLogo-img {
+            max-width: 9.8461vw;
+        }
+
+        .bg-striking .StudiosHeaderLogo-img {
+            max-width: 15.1538vw;
+        }
+
+        .bg-dreammotion .StudiosHeaderLogo-img {
+            max-width: 15.46vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .bg-bluehole .StudiosHeaderLogo-img {
+            max-width: 16.1538vw;
+        }
+
+        .bg-risingwings .StudiosHeaderLogo-img {
+            max-width: 9.8461vw;
+        }
+
+        .bg-striking .StudiosHeaderLogo-img {
+            max-width: 15.1538vw;
+        }
+
+        .bg-dreammotion .StudiosHeaderLogo-img {
+            max-width: 16.437vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .bg-bluehole .StudiosHeaderLogo-img {
+            max-width: 21.1538vw;
+        }
+
+        .bg-risingwings .StudiosHeaderLogo-img {
+            max-width: 12.8461vw;
+        }
+
+        .bg-striking .StudiosHeaderLogo-img {
+            max-width: 15.1538vw;
+        }
+
+        .bg-dreammotion .StudiosHeaderLogo-img {
+            max-width: 21vw;
+        }
+    }
+
+    .StudiosHeaderLogo-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 128px;
+    }
+
+    @keyframes StudiosHeader {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosHeader {
+            margin-bottom: 7.4615vw;
+        }
+
+        .StudiosHeaderLogo {
+            width: 23.461vw;
+            height: 22.384vw;
+            transform: translateY(2.3076vw);
+        }
+
+        .StudiosHeaderLogo-img {
+            max-width: 9.8461vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosHeader {
+            margin-bottom: 7.4615vw;
+        }
+
+        .StudiosHeaderLogo {
+            width: 23.461vw;
+            height: 22.384vw;
+            transform: translateY(2.3076vw);
+        }
+
+        .StudiosHeaderLogo-img {
+            max-width: 9.8461vw;
+        }
+
+        .StudiosHeaderBg-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosHeader {
+            margin-bottom: 18.4615vw;
+        }
+
+        .StudiosHeaderBg {
+            margin-left: -5vw;
+            margin-right: -5vw;
+        }
+
+        .StudiosHeaderBg-inner {
+            width: 210vw;
+        }
+
+        .StudiosHeaderLogo {
+            width: 29.461vw;
+            height: 28.384vw;
+            transform: translateY(2.3076vw);
+            bottom: -15vw;
+        }
+
+        .StudiosHeaderLogo-img {
+            max-width: 9.8461vw;
+        }
+
+        .StudiosHeaderBg:after {
+            padding-bottom: 52.6%;
+        }
+
+        .StudiosHeaderBg-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    /*	Studio:StudiosTempText
+=========================================================*/
+    .StudiosTempTitle {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 35px;
+        overflow: hidden;
+    }
+
+    .StudiosTempTitle-text {
+        font-size: 46px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: bold;
+        display: block;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateY(110%);
+    }
+
+    .StudiosTempTitle.is-textTop .StudiosTempTitle-text {
+        transform: translateY(0%);
+    }
+
+    .StudiosTempText {
+        font-size: 20px;
+        line-height: 1.9em;
+        color: #000;
+    }
+
+    .StudiosTempText-text {
+        margin-bottom: 39px;
+    }
+
+    .StudiosTempText-text:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempTitle {
+            margin-bottom: 2.6923vw;
+        }
+
+        .StudiosTempTitle-text {
+            font-size: 3.5384vw;
+        }
+
+        .StudiosTempText {
+            font-size: 1.53846vw;
+        }
+
+        .StudiosTempText-text {
+            margin-bottom: 3vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempTitle {
+            margin-bottom: 2.6923vw;
+        }
+
+        .StudiosTempTitle-text {
+            font-size: 4.0384vw;
+        }
+
+        .StudiosTempText {
+            font-size: 1.73846vw;
+        }
+
+        .StudiosTempText-text {
+            margin-bottom: 3vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempTitle {
+            margin-bottom: 3.6923vw;
+        }
+
+        .StudiosTempTitle-text {
+            font-size: 6.4384vw;
+            line-height: 1.5em;
+        }
+
+        .StudiosTempText {
+            font-size: 3.73846vw;
+        }
+
+        .StudiosTempText-text {
+            margin-bottom: 6vw;
+        }
+    }
+
+    /*	Studio:StudiosTempLeft
+=========================================================*/
+    .StudiosTempLeft {
+        width: calc(50% - 30px);
+        float: left;
+        clear: both;
+        margin-bottom: 74px;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempLeft {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempLeft {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempLeft {
+            width: 100%;
+            margin-bottom: 13.6923vw;
+        }
+    }
+
+    /*	Studio:StudiosTempRight
+=========================================================*/
+    .StudiosTempRight {
+        width: calc(50% - 30px);
+        float: right;
+        clear: both;
+        margin-bottom: 74px;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempRight {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempRight {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempRight {
+            width: 100%;
+            margin-bottom: 13.6923vw;
+        }
+    }
+
+    /*	Studio:StudiosTempPhoto
+=========================================================*/
+    .StudiosTempPhoto {
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        clear: both;
+        margin-bottom: 85px;
+    }
+
+    .StudiosTempPhoto-img {
+        display: block;
+        width: 100%;
+    }
+
+    .StudiosTempPhotoBg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .StudiosTempPhotoBg-item {
+        background-color: #fff;
+        display: block;
+        width: 100%;
+        height: 25.2%;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        transform: scaleX(1);
+    }
+
+    .StudiosTempPhotoBg-item:nth-child(odd) {
+        transform-origin: left;
+    }
+
+    .StudiosTempPhotoBg-item:nth-child(even) {
+        transform-origin: right;
+    }
+
+    .StudiosTempPhoto.is-Photo .StudiosTempPhotoBg-item {
+        animation-name: StudiosTempPhotoBg;
+    }
+
+    @keyframes StudiosTempPhotoBg {
+        0% {
+            transform: scaleX(1);
+        }
+
+        100% {
+            transform: scaleX(0);
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempPhoto {
+            margin-bottom: 6.538vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempPhoto {
+            margin-bottom: 6.538vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempPhoto {
+            margin-bottom: 13.538vw;
+            margin-left: -6.25vw;
+            margin-right: -6.25vw;
+        }
+
+        .StudiosTempPhoto-img {
+            width: auto;
+            min-width: 100%;
+            max-width: calc(100vw + 40vw);
+            margin-left: -20vw;
+            margin-right: -20vw;
+        }
+    }
+
+    /*	Studio:StudiosTempFullPhoto
+=========================================================*/
+    .StudiosTempFullPhoto {
+        position: relative;
+        clear: both;
+        margin-bottom: 100px;
+    }
+
+    .StudiosTempFullPhoto:after {
+        content: "";
+        display: block;
+        padding-bottom: 30.6%;
+    }
+
+    .StudiosTempFullPhoto-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .StudiosTempFullPhoto-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: none;
+        min-width: 100%;
+        min-height: 150%;
+        max-height: 260%;
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    body.Safari .StudiosTempFullPhoto-img {
+        transition-duration: 0s;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .StudiosTempFullPhoto-img {
+            transition-duration: 0s;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempFullPhoto {
+            margin-bottom: 7.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempFullPhoto {
+            margin-bottom: 7.6923vw;
+        }
+
+        .StudiosTempFullPhoto-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempFullPhoto {
+            margin-bottom: 13.6923vw;
+            margin-left: -20vw;
+            margin-right: -20vw;
+        }
+
+        .StudiosTempFullPhoto-inner {
+            width: 180vw;
+        }
+
+        .StudiosTempFullPhoto:after {
+            padding-bottom: 40%;
+        }
+
+        .StudiosTempFullPhoto-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    /*	Studio:StudiosTempList
+=========================================================*/
+    .StudiosTempList {
+        margin-bottom: 42px;
+    }
+
+    .StudiosTempList-title {
+        font-size: 28px;
+        line-height: 1.4em;
+        color: #000;
+        font-weight: bold;
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.2s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    .StudiosTempList-text {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.7em;
+        color: #000;
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    .is-Opacity .StudiosTempList-title {
+        opacity: 1;
+    }
+
+    .is-Opacity .StudiosTempList-text {
+        opacity: 1;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempList {
+            margin-bottom: 3.2307vw;
+        }
+
+        .StudiosTempList-title {
+            font-size: 2.1538vw;
+        }
+
+        .StudiosTempList-text {
+            font-size: 1.2307vw;
+            margin-top: 1.5384vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempList {
+            margin-bottom: 3.2307vw;
+        }
+
+        .StudiosTempList-title {
+            font-size: 2.8538vw;
+        }
+
+        .StudiosTempList-text {
+            font-size: 1.5707vw;
+            margin-top: 1.5384vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempList {
+            margin-bottom: 8.2307vw;
+        }
+
+        .StudiosTempList-title {
+            font-size: 4.4538vw;
+            line-height: 1.5em;
+        }
+
+        .StudiosTempList-text {
+            font-size: 3.5707vw;
+            margin-top: 3.0384vw;
+        }
+    }
+
+    /*	Studio:StudiosTempPost
+=========================================================*/
+    .StudiosTempPost {
+        clear: both;
+    }
+
+    .StudiosTempPostHeader {
+        margin-bottom: 52px;
+    }
+
+    .StudiosTempPostHeaderTitle {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        padding-bottom: 2px;
+    }
+
+    .StudiosTempPostHeaderTitle.is-textTop .StudiosTempPostHeaderTitle-text {
+        transform: translateY(0%);
+    }
+
+    .StudiosTempPostHeaderTitle-text {
+        font-size: 46px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: bold;
+        display: block;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateY(110%);
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempPostHeader {
+            margin-bottom: 4vw;
+        }
+
+        .StudiosTempPostHeaderTitle-text {
+            font-size: 3.53846vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempPostHeader {
+            margin-bottom: 4vw;
+        }
+
+        .StudiosTempPostHeaderTitle-text {
+            font-size: 4.13846vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempPostHeader {
+            margin-bottom: 6vw;
+        }
+
+        .StudiosTempPostHeaderTitle-text {
+            font-size: 10.53846vw;
+            line-height: 1.2em;
+        }
+    }
+
+    /*	Studio:StudiosTempPost(Post)
+=========================================================*/
+    .StudiosTempPost-list {
+        margin: -55px -30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .StudiosTempPost-item {
+        padding: 55px 30px;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .StudiosTempPostItem {
+        height: 100%;
+        border-bottom: solid 1px #000;
+    }
+
+    .StudiosTempPostItem-link {
+        display: block;
+        position: relative;
+        padding-bottom: 100px;
+        height: 100%;
+    }
+
+    .StudiosTempPostItemThumb-inner {
+        line-height: 0;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+    }
+
+    .StudiosTempPostItemThumb-inner:after {
+        content: "";
+        display: block;
+        padding-bottom: 45.4%;
+    }
+
+    .StudiosTempPostItemThumb {
+        margin-bottom: 36px;
+    }
+
+    .StudiosTempPostItemThumb-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transition-property: transform;
+        transition-duration: 0.8s;
+        transition-timing-function: ease-out;
+        transform: translateY(100%);
+    }
+
+    .is-Opacity .StudiosTempPostItemThumb-img {
+        transform: translateY(0%);
+    }
+
+
+    .StudiosTempPostItemContTitle {
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .StudiosTempPostItemContTitle-text {
+        font-size: 36px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: bold;
+        background-image: linear-gradient(#000, #000);
+        background-position: left bottom;
+        background-size: 0% 2px;
+        background-repeat: no-repeat;
+        transition-property: background-size;
+        transition-duration: 0.3s;
+    }
+
+    .StudiosTempPostItemCont-sub {
+        font-size: 18px;
+        line-height: 1.2em;
+        color: #000;
+        font-weight: 500;
+        margin-top: 12px;
+    }
+
+    .StudiosTempPostItemContMeta {
+        margin-bottom: 11px;
+    }
+
+    .StudiosTempPostItemContMeta-list {
+        overflow: hidden;
+        margin: -2px -20px;
+    }
+
+    .StudiosTempPostItemContMeta-item {
+        padding: 2px 20px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .StudiosTempPostItemContMeta-item:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 13px;
+        background-color: #707070;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .StudiosTempPostItemContMeta-item:last-child:after {
+        display: none;
+    }
+
+    .StudiosTempPostItemContMeta-text {
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #000;
+        display: block;
+        float: left;
+        margin-right: 17px;
+    }
+
+    .StudiosTempPostItemContMeta-text:last-child {
+        margin-right: 0;
+    }
+
+    .StudiosTempPostItemCont-subtext {
+        font-size: 16px;
+        line-height: 1.8em;
+        color: #000;
+        margin-top: 30px;
+    }
+
+    .StudiosTempPostItemCont-arrow {
+        width: 40px;
+        height: 14px;
+        background-image: url(../img/icon/ico-post-arrow-b.png);
+        background-size: 40px 14px;
+        transform: translateX(-20px);
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        position: absolute;
+        bottom: 40px;
+        left: 0;
+    }
+
+    .is-Opacity .StudiosTempPostItemCont-arrow {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
+    @media screen and (min-width: 1025px) {
+        .StudiosTempPostItem-link:hover .StudiosTempPostItemContTitle-text {
+            background-size: 100% 2px;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .StudiosTempPost-list {
+            margin: -4.23076vw -2.3076vw;
+        }
+
+        .StudiosTempPost-item {
+            padding: 4.23076vw 2.3076vw;
+        }
+
+        .StudiosTempPostItem-link {
+            padding-bottom: 7.6923vw;
+        }
+
+        .StudiosTempPostItemThumb {
+            margin-bottom: 2.7692vw;
+        }
+
+        .StudiosTempPostItemContTitle-text {
+            font-size: 2.7692vw;
+        }
+
+        .StudiosTempPostItemCont-sub {
+            font-size: 1.3846vw;
+            margin-top: 0.923vw;
+        }
+
+        .StudiosTempPostItemContMeta {
+            margin-bottom: 0.8461vw;
+        }
+
+        .StudiosTempPostItemContMeta-list {
+            margin: -0.1538vw -1.5384vw;
+        }
+
+        .StudiosTempPostItemContMeta-item {
+            padding: 0.1538vw 1.5384vw;
+        }
+
+        .StudiosTempPostItemContMeta-item:after {
+            height: 1vw;
+        }
+
+        .StudiosTempPostItemContMeta-text {
+            font-size: 1.2307vw;
+            margin-right: 1.3076vw;
+        }
+
+        .StudiosTempPostItemCont-subtext {
+            font-size: 1.2307vw;
+            margin-top: 2.3076vw;
+        }
+
+        .StudiosTempPostItemCont-arrow {
+            width: 3.076vw;
+            height: 1.0769vw;
+            background-size: 3.076vw 1.0769vw;
+            transform: translateX(-1.538vw);
+            bottom: 3.076vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .StudiosTempPost-list {
+            margin: -4.23076vw -2.3076vw;
+        }
+
+        .StudiosTempPost-item {
+            padding: 4.23076vw 2.3076vw;
+        }
+
+        .StudiosTempPostItem-link {
+            padding-bottom: 7.6923vw;
+        }
+
+        .StudiosTempPostItemThumb {
+            margin-bottom: 2.7692vw;
+        }
+
+        .StudiosTempPostItemContTitle-text {
+            font-size: 2.7692vw;
+        }
+
+        .StudiosTempPostItemCont-sub {
+            font-size: 1.5846vw;
+            margin-top: 1.423vw;
+        }
+
+        .StudiosTempPostItemContMeta {
+            margin-bottom: 1.2461vw;
+        }
+
+        .StudiosTempPostItemContMeta-list {
+            margin: -0.1538vw -1.5384vw;
+        }
+
+        .StudiosTempPostItemContMeta-item {
+            padding: 0.1538vw 1.5384vw;
+        }
+
+        .StudiosTempPostItemContMeta-item:after {
+            height: 1vw;
+        }
+
+        .StudiosTempPostItemContMeta-text {
+            font-size: 1.5307vw;
+            margin-right: 1.3076vw;
+        }
+
+        .StudiosTempPostItemCont-subtext {
+            font-size: 1.5307vw;
+            margin-top: 2.3076vw;
+        }
+
+        .StudiosTempPostItemCont-arrow {
+            width: 3.076vw;
+            height: 1.0769vw;
+            background-size: 3.076vw 1.0769vw;
+            transform: translateX(-1.538vw);
+            bottom: 3.076vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .StudiosTempPost-list {
+            margin: 0 -2.3076vw;
+            display: block;
+        }
+
+        .StudiosTempPost-item {
+            padding: 0 2.3076vw;
+            flex: none;
+            margin-left: -6.25vw;
+            margin-right: -6.25vw;
+            max-width: none;
+        }
+
+        .StudiosTempPostItem {
+            border-bottom: none;
+        }
+
+        .StudiosTempPostItem-link {
+            padding-bottom: 25.0769vw;
+        }
+
+        .StudiosTempPostItemThumb {
+            margin-bottom: 8.7692vw;
+        }
+
+        .StudiosTempPostItemCont {
+            padding: 0 6.25vw;
+        }
+
+        .StudiosTempPostItemContTitle-text {
+            font-size: 6.3692vw;
+        }
+
+        .StudiosTempPostItemCont-sub {
+            font-size: 3.6846vw;
+            margin-top: 1.9153vw;
+        }
+
+        .StudiosTempPostItemContMeta {
+            margin-bottom: 3.061vw;
+        }
+
+        .StudiosTempPostItemContMeta-list {
+            margin: -0.8153vw -1.8153vw;
+        }
+
+        .StudiosTempPostItemContMeta-item {
+            padding: 0.8153vw 2.5384vw;
+        }
+
+        .StudiosTempPostItemContMeta-item:after {
+            height: 3vw;
+        }
+
+        .StudiosTempPostItemContMeta-text {
+            font-size: 3.6307vw;
+            margin-right: 3.4076vw;
+        }
+
+        .StudiosTempPostItemCont-subtext {
+            font-size: 3.4307vw;
+            margin-top: 4.3076vw;
+        }
+
+        .StudiosTempPostItemCont-arrow {
+            width: 9.0769vw;
+            height: 2.5769vw;
+            background-size: 9.0769vw 2.5769vw;
+            left: 6.25vw;
+            bottom: 16.0769vw;
+        }
+    }
+
+    /*=========================================================
+	History
+=========================================================*/
+    /*	History:Banner
+=========================================================*/
+    .HistoryBanner {
+        position: relative;
+        clear: both;
+        margin-bottom: 100px;
+    }
+
+    .HistoryBanner:after {
+        content: "";
+        display: block;
+        padding-bottom: 41.7%;
+    }
+
+    .HistoryBanner-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .HistoryBanner-center {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        min-width: 100%;
+    }
+
+    .HistoryBanner-img {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-width: none;
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .HistoryBanner-img {
+            max-height: calc(100% + 20vh);
+        }
+    }
+
+    body.Safari .HistoryBanner-img {
+        transition-duration: 0s;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .HistoryBanner-img {
+            transition-duration: 0s;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .HistoryBanner {
+            margin-bottom: 7.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .HistoryBanner {
+            margin-bottom: 7.6923vw;
+        }
+
+        .HistoryBanner-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .HistoryBanner {
+            margin-bottom: 13.6923vw;
+            margin-left: -20vw;
+            margin-right: -20vw;
+        }
+
+        .HistoryBanner-inner {
+            width: 190vw;
+        }
+
+        .HistoryBanner:after {
+            padding-bottom: 40%;
+        }
+
+        .HistoryBanner-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    /*	History:SlideHeader
+=========================================================*/
+    .HistorySlideHeader {
+        position: relative;
+    }
+
+    .HistorySlideYearText {
+        font-size: 20px;
+        line-height: 1.4em;
+        color: #000;
+        font-weight: 500;
+        text-align: right;
+        position: absolute;
+        top: 35px;
+        right: 0;
+    }
+
+    .HistorySlideYear {
+        padding-bottom: 88px;
+        margin-bottom: 84px;
+        position: relative;
+    }
+
+    .HistorySlideScroll {
+        width: 100vw;
+        height: 1px;
+        background-color: #DDDDDD;
+        position: absolute;
+        top: -85px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 0 40px;
+    }
+
+    .HistorySlide-scrollbar {
+        max-width: 1200px;
+        width: 100%;
+        height: 3px;
+        opacity: 1 !important;
+        margin: 0 auto;
+        background-color: transparent;
+        margin-top: -1px;
+    }
+
+    .HistorySlide-scrollbar .swiper-scrollbar-drag {
+        height: 100%;
+        opacity: 1;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .HistorySlideScroll {
+            top: -85px;
+        }
+    }
+
+
+    .HistorySlideYear-item {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+
+    .HistorySlideYear-text {
+        font-size: 240px;
+        line-height: 1.1em;
+        color: #000;
+        font-family: 'Lato';
+        font-weight: 300;
+        display: block;
+    }
+
+    .HistorySlideYear-inner {
+        width: 554px;
+        overflow: hidden;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .HistorySlideYearText {
+            font-size: 1.5384vw;
+            top: 2.6923vw;
+        }
+
+        .HistorySlideYear {
+            padding-bottom: 6.7692vw;
+            margin-bottom: 6.4615vw;
+        }
+
+        .HistorySlideYear-text {
+            font-size: 18.461vw;
+        }
+
+        .HistorySlideYear-inner {
+            width: 42.615vw;
+        }
+
+        .HistorySlideScroll {
+            padding: 0 3.4769vw;
+            top: -6.5384vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .HistorySlideYearText {
+            font-size: 2.5384vw;
+            top: 2.2923vw;
+        }
+
+        .HistorySlideYear {
+            padding-bottom: 7.7692vw;
+            margin-bottom: 6.4615vw;
+        }
+
+        .HistorySlideYear-text {
+            font-size: 18.461vw;
+        }
+
+        .HistorySlideYear-inner {
+            width: 42.615vw;
+        }
+
+        .HistorySlideScroll {
+            padding: 0 2.607vw;
+            top: -6.4384vw;
+        }
+
+        .HistorySlide-scrollbar {
+            height: 2px;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .HistorySlideYearText {
+            font-size: 3.5384vw;
+            top: 2.6923vw;
+        }
+
+        .HistorySlideYear {
+            padding-bottom: 9.7692vw;
+            margin-bottom: 8.4615vw;
+        }
+
+
+        .HistorySlideYear-text {
+            font-size: 18.461vw;
+            font-weight: 500;
+        }
+
+        .HistorySlideYear-inner {
+            width: 42.615vw;
+        }
+
+        .HistorySlideScroll {
+            padding: 0 6.25vw;
+            top: -8.8384vw;
+        }
+
+        .HistorySlide-scrollbar {
+            height: 2px;
+        }
+    }
+
+    /*	History:SlideContent
+=========================================================*/
+    .HistorySlideSection {
+        margin-left: -114px;
+        margin-right: -114px;
+        padding: 0 114px;
+    }
+
+    .HistorySlide-arrow {
+        width: 228px;
+        height: 78px;
+        background-size: 228px 78px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 50;
+        transition-property: opacity, visibility;
+        transition-duration: 0.2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .HistorySlide-prev {
+        background-image: url(../img/icon/ico-history-prev.png);
+        left: 0;
+    }
+
+    .HistorySlide-next {
+        background-image: url(../img/icon/ico-history-next.png);
+        right: 0;
+    }
+
+    .HistorySlide-small-arrow {
+        width: 36px;
+        height: 14px;
+        background-size: 36px 14px;
+        position: absolute;
+        top: -120px;
+        cursor: pointer;
+        z-index: 50;
+    }
+
+    .HistorySlide-small-arrow.swiper-button-disabled {
+        opacity: 0.15 !important;
+    }
+
+    .HistorySlide-small-arrow.HistorySlide-prev {
+        background-image: url(../img/icon/ico-history-small-prev.png);
+        left: 0;
+    }
+
+    .HistorySlide-small-arrow.HistorySlide-next {
+        background-image: url(../img/icon/ico-history-small-next.png);
+        right: 0;
+    }
+
+    .HistorySlide-container {
+        overflow: visible;
+    }
+
+    .HistoryList {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .HistoryList-list {
+        margin: -12px -25px;
+    }
+
+    .HistoryList-item {
+        padding: 12px 25px;
+        width: 33.3333%;
+        float: left;
+    }
+
+    .HistoryList-item:nth-child(3n + 1) {
+        clear: both;
+    }
+
+    .HistoryListMonth-title {
+        font-size: 18px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: 500;
+        font-family: 'Poppins';
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .HistoryListMonth-item {
+        margin-top: 5px;
+        padding-left: 10px;
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #000;
+    }
+
+    .HistoryListMonth-item:before {
+        content: "-";
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    HistoryListMonth-item:first-child {
+        margin-top: 0;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .HistorySlideSection {
+            margin-left: -8.7692vw;
+            margin-right: -8.7692vw;
+            padding: 0 8.7692vw;
+        }
+
+        .HistorySlide-arrow {
+            width: 17.538vw;
+            height: 6vw;
+            background-size: 17.538vw 6vw;
+        }
+
+        .HistorySlide-prev {
+            left: 0;
+        }
+
+        .HistorySlide-next {
+            right: 0;
+        }
+
+        .HistoryList-list {
+            margin: -0.923vw -1.923vw;
+        }
+
+        .HistoryList-item {
+            padding: 0.923vw 1.923vw;
+        }
+
+        .HistoryListMonth-title {
+            font-size: 1.3846vw;
+            margin-bottom: 1.1538vw;
+        }
+
+        .HistoryListMonth-item {
+            margin-top: 0.3846vw;
+            padding-left: 0.7692vw;
+            font-size: 1.23076vw;
+        }
+
+        .HistorySlide-small-arrow {
+            width: 2.615vw;
+            height: 1.0769vw;
+            background-size: 2.615vw 1.0769vw;
+            top: -9.2307vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .HistorySlideSection {
+            margin-left: -8.7692vw;
+            margin-right: -8.7692vw;
+            padding: 0 8.7692vw;
+        }
+
+        .HistorySlide-arrow {
+            width: 17.538vw;
+            height: 6vw;
+            background-size: 17.538vw 6vw;
+        }
+
+        .HistorySlide-prev {
+            left: -1.5vw;
+        }
+
+        .HistorySlide-next {
+            right: -1.5vw;
+        }
+
+        .HistoryList-list {
+            margin: -1.923vw -2.423vw;
+        }
+
+        .HistoryList-item {
+            padding: 1.923vw 2.423vw;
+        }
+
+        .HistoryListMonth-title {
+            font-size: 2.3846vw;
+            margin-bottom: 1.1538vw;
+        }
+
+        .HistoryListMonth-item {
+            margin-top: 0.7846vw;
+            padding-left: 0.9692vw;
+            font-size: 1.53076vw;
+            line-height: 1.7em;
+        }
+
+        .HistorySlide-arrow {
+            top: -12.2vw;
+            transform: translateY(0);
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: none;
+        }
+
+        .HistorySlide-small-arrow {
+            width: 4.615vw;
+            height: 2.0769vw;
+            background-size: 4.615vw 2.0769vw;
+            top: -10.2307vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .HistorySlideSection {
+            margin-left: -8.7692vw;
+            margin-right: -8.7692vw;
+            padding: 0 8.7692vw;
+        }
+
+        .HistorySlide-arrow {
+            width: 17.538vw;
+            height: 6vw;
+            background-size: 17.538vw 6vw;
+        }
+
+        .HistorySlide-prev {
+            left: -4vw;
+        }
+
+        .HistorySlide-next {
+            right: -4vw;
+        }
+
+        .HistoryList-list {
+            margin: -3.923vw -2.423vw;
+        }
+
+        .HistoryList-item {
+            padding: 3.923vw 2.423vw;
+            width: 100%;
+        }
+
+
+        .HistoryList-item {
+            clear: both;
+        }
+
+        .HistoryListMonth-title {
+            font-size: 4.6846vw;
+            margin-bottom: 1.1538vw;
+        }
+
+        .HistoryListMonth-item {
+            margin-top: 0.7846vw;
+            padding-left: 2.2692vw;
+            font-size: 3.73076vw;
+            line-height: 1.7em;
+        }
+
+        .HistorySlide-arrow {
+            top: -14.3vw;
+            transform: translateY(0);
+            opacity: 1 !important;
+            visibility: visible !important;
+            display: none;
+        }
+
+        .HistorySlide-small-arrow {
+            width: 8.615vw;
+            height: 4.0769vw;
+            background-size: 8.615vw 4.0769vw;
+            top: -15.0307vw;
+        }
+
+        .HistorySlide-small-arrow.HistorySlide-prev {
+            left: 0vw;
+        }
+
+        .HistorySlide-small-arrow.HistorySlide-next {
+            right: 0vw;
+        }
+    }
+
+    /*	History:Slide Action
+=========================================================*/
+    .HistorySlide-item .HistoryList {
+        opacity: 0;
+        transition-property: opacity, visibility, transform;
+        transition-duration: 0.6s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .HistorySlide-item.swiper-slide-active .HistoryList {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.3s;
+    }
+
+    @media screen and (min-width: 1025px) {
+        .HistorySlideSection:hover .is-Left .HistorySlide-prev {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .HistorySlideSection:hover .is-Right .HistorySlide-next {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .is-Start .HistorySlide-next {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .HistorySlide-arrow.swiper-button-disabled {
+        opacity: 0.1 !important;
+    }
+
+    .HistorySlideYear-item .HistorySlideYear-text {
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transform: translateY(100%);
+    }
+
+    .HistorySlideYear-item.swiper-slide-active .HistorySlideYear-text {
+        transition-delay: 0.3s;
+        transform: translateY(0%);
+    }
+
+    .HistoryListMonth-title {
+        transition-property: opacity, transform;
+        transition-duration: 0s;
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    .HistorySlide-item.swiper-slide-active .HistoryListMonth-title {
+        opacity: 1;
+        transition-duration: 0.8s;
+        transform: translateX(0px);
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .HistorySlideYear-item .HistorySlideYear-text {
+            transition-duration: 0.4s;
+        }
+
+        .HistorySlideYear-item.swiper-slide-active .HistorySlideYear-text {
+            transition-delay: 0.2s;
+        }
+
+        .HistoryListMonth-title {
+            transition-duration: 0s;
+            transition-delay: 0.2s;
+        }
+
+        .HistorySlide-item.swiper-slide-active .HistoryListMonth-title {
+            transition-duration: 0.4s;
+        }
+
+        .HistorySlide-arrow.swiper-button-disabled {
+            opacity: 0 !important;
+        }
+    }
+
+    /*=========================================================
+	Challenge
+=========================================================*/
+    /*	Challenge:Banner
+=========================================================*/
+    .ChallengeBanner {
+        position: relative;
+        clear: both;
+        margin-bottom: 90px;
+    }
+
+    .ChallengeBanner:after {
+        content: "";
+        display: block;
+        padding-bottom: 27.6%;
+    }
+
+    .ChallengeBanner-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .ChallengeBanner-center {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        min-width: 100%;
+    }
+
+    .ChallengeBanner-img {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-width: none;
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .ChallengeBanner-img {
+            max-height: calc(100% + 20vh);
+        }
+    }
+
+    body.Safari .ChallengeBanner-img {
+        transition-duration: 0s;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .ChallengeBanner-img {
+            transition-duration: 0s;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .ChallengeBanner {
+            margin-bottom: 6.923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .ChallengeBanner {
+            margin-bottom: 6.923vw;
+        }
+
+        .ChallengeBanner-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .ChallengeBanner {
+            margin-bottom: 13.6923vw;
+            margin-left: -20vw;
+            margin-right: -20vw;
+        }
+
+        .ChallengeBanner-inner {
+            width: 190vw;
+        }
+
+        .ChallengeBanner:after {
+            padding-bottom: 40%;
+        }
+
+        .ChallengeBanner-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    /*	Challenge:List
+=========================================================*/
+    .ChallengeSubText-text {
+        width: 57%;
+        display: block;
+        font-size: 26px;
+        line-height: 1.8em;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .ChallengeList-item {
+        margin-top: 188px;
+    }
+
+    .ChallengeList-item:first-child {
+        margin-top: 0px;
+    }
+
+    .ChallengePost-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ChallengePostThumbnail {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .ChallengePostCont {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .ChallengeList-left .ChallengePostThumbnail {
+        padding-right: 50px;
+        order: 1;
+    }
+
+    .ChallengeList-right .ChallengePostThumbnail {
+        order: 2;
+        padding-left: 50px;
+    }
+
+    .ChallengeList-left .ChallengePostCont {
+        padding-left: 50px;
+        order: 2;
+    }
+
+    .ChallengeList-right .ChallengePostCont {
+        order: 1;
+        padding-right: 50px;
+        text-align: right;
+    }
+
+    .ChallengeList-left .ChallengePostCont .ChallengePostCont-date {
+        padding-right: 280px;
+    }
+
+    .ChallengeList-left .ChallengePostCont .ChallengePostCont-title {
+        padding-right: 280px;
+    }
+
+    .ChallengeList-right .ChallengePostCont .ChallengePostCont-date {
+        padding-left: 280px;
+    }
+
+    .ChallengeList-right .ChallengePostCont .ChallengePostCont-title {
+        padding-left: 280px;
+    }
+
+    .ChallengeList {
+        position: relative;
+        padding-bottom: 20px;
+    }
+
+    .ChallengeList:before {
+        content: "";
+        width: 1px;
+        background-color: #DDDDDD;
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+    }
+
+    .ChallengePost {
+        margin-top: 79px;
+    }
+
+    .ChallengePost:first-child {
+        margin-top: 0;
+    }
+
+    .ChallengePostThumbnail-video {
+        line-height: 0;
+        position: relative;
+        margin-bottom: 25px;
+        overflow: hidden;
+        background-color: #000;
+    }
+
+    .ChallengePostThumbnail-video:after {
+        content: "";
+        display: block;
+        padding-bottom: 56%;
+    }
+
+    .ChallengePostThumbnail-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .ChallengePostThumbnail-text {
+        font-size: 18px;
+        line-height: 1.6em;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .ChallengePostThumbnail-sub {
+        font-size: 14px;
+        line-height: 1.6em;
+        color: #000;
+        margin-top: 5px;
+    }
+
+    .ChallengePostCont-date {
+        font-size: 12px;
+        line-height: 1.3em;
+        color: #000;
+        font-family: 'Lato';
+        margin-bottom: 3px;
+    }
+
+    .ChallengePostCont-title {
+        font-size: 30px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .ChallengePostCont-title:after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #000;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .ChallengeList-left .ChallengePostCont-title:after {
+        left: -55px;
+    }
+
+    .ChallengeList-right .ChallengePostCont-title:after {
+        right: -55px;
+    }
+
+
+    .ChallengeListItem-year {
+        font-size: 0;
+        line-height: 0;
+        pointer-events: none;
+    }
+
+    .ChallengeListItem-yeartext {
+        font-size: 110px;
+        line-height: 1em;
+        color: #000;
+        font-weight: normal;
+        font-family: 'Lato';
+        display: block;
+    }
+
+    .ChallengeListItem-inner {
+        position: relative;
+    }
+
+    .ChallengeListItem-year {
+        position: absolute;
+        top: -15px;
+        right: 0;
+        left: 0;
+        z-index: 5;
+    }
+
+    .ChallengeList-left .ChallengeListItem-year {
+        text-align: right;
+    }
+
+    .ChallengeList-right .ChallengeListItem-year {
+        text-align: left;
+    }
+
+    .ChallengeListItem-list {
+        position: relative;
+        z-index: 10;
+    }
+
+    /*	Challenge:List Action
+=========================================================*/
+    .ChallengePostThumbnail-video iframe {
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateY(110%);
+    }
+
+    .is-ChallengePost .ChallengePostThumbnail-video iframe {
+        transform: translateY(0%);
+    }
+
+    .ChallengePostThumbnail-text {
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.6s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    .is-ChallengePost .ChallengePostThumbnail-text {
+        opacity: 1;
+    }
+
+    .ChallengePostCont-date {
+        transition-property: opacity, transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    .is-ChallengePost .ChallengePostCont-date {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .ChallengePostCont-title {
+        transition-property: opacity, transform;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    .is-ChallengePost .ChallengePostCont-title {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .ChallengePostCont-title:after {
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-delay: 1.0s;
+        opacity: 0;
+    }
+
+    .is-ChallengePost .ChallengePostCont-title:after {
+        opacity: 1;
+    }
+
+    .ChallengeListItem-yeartext {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        opacity: 0.05;
+    }
+
+    .is-View.ChallengeListItem-year .ChallengeListItem-yeartext {
+        opacity: 1;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .ChallengeSubText-text {
+            font-size: 2vw;
+        }
+
+        .ChallengeList-item {
+            margin-top: 14.461vw;
+        }
+
+        .ChallengeList-left .ChallengePostThumbnail {
+            padding-right: 3.8461vw;
+        }
+
+        .ChallengeList-right .ChallengePostThumbnail {
+            padding-left: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-left .ChallengePostCont {
+            padding-left: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-right .ChallengePostCont {
+            padding-right: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-left .ChallengePostCont .ChallengePostCont-date {
+            padding-right: 21.538vw;
+        }
+
+        .ChallengeList-left .ChallengePostCont .ChallengePostCont-title {
+            padding-right: 21.538vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont .ChallengePostCont-date {
+            padding-left: 21.538vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont .ChallengePostCont-title {
+            padding-left: 21.538vw;
+        }
+
+        .ChallengeList {
+            padding-bottom: 1.5384vw;
+        }
+
+        .ChallengeList:before {
+            top: 1.5384vw;
+            bottom: 1.5384vw;
+        }
+
+        .ChallengePost {
+            margin-top: 6.0769vw;
+        }
+
+        .ChallengePostThumbnail-video {
+            margin-bottom: 1.92307vw;
+        }
+
+        .ChallengePostThumbnail-text {
+            font-size: 1.38461vw;
+        }
+
+        .ChallengePostThumbnail-sub {
+            font-size: 1.0769vw;
+            margin-top: 0.3846vw;
+        }
+
+        .ChallengePostCont-date {
+            font-size: 0.92307vw;
+            margin-bottom: 0.23076vw;
+        }
+
+        .ChallengePostCont-title {
+            font-size: 2.30769vw;
+        }
+
+        .ChallengePostCont-title:after {
+            width: 0.7692vw;
+            height: 0.7692vw;
+        }
+
+        .ChallengeList-left .ChallengePostCont-title:after {
+            left: -4.1307vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont-title:after {
+            right: -4.3307vw;
+        }
+
+        .ChallengeListItem-yeartext {
+            font-size: 8.4615vw;
+        }
+
+        .ChallengeListItem-year {
+            top: -1.1538vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .ChallengeSubText-text {
+            font-size: 2vw;
+        }
+
+        .ChallengeList-item {
+            margin-top: 14.461vw;
+        }
+
+        .ChallengeList-left .ChallengePostThumbnail {
+            padding-right: 3.8461vw;
+        }
+
+        .ChallengeList-right .ChallengePostThumbnail {
+            padding-left: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-left .ChallengePostCont {
+            padding-left: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-right .ChallengePostCont {
+            padding-right: 3.8461vw;
+            ;
+        }
+
+        .ChallengeList-left .ChallengePostCont .ChallengePostCont-date {
+            padding-right: 21.538vw;
+        }
+
+        .ChallengeList-left .ChallengePostCont .ChallengePostCont-title {
+            padding-right: 21.538vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont .ChallengePostCont-date {
+            padding-left: 21.538vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont .ChallengePostCont-title {
+            padding-left: 21.538vw;
+        }
+
+        .ChallengeList {
+            padding-bottom: 1.5384vw;
+        }
+
+        .ChallengeList:before {
+            top: 1.5384vw;
+            bottom: 1.5384vw;
+        }
+
+        .ChallengePost {
+            margin-top: 6.0769vw;
+        }
+
+        .ChallengePostThumbnail-video {
+            margin-bottom: 1.92307vw;
+        }
+
+        .ChallengePostThumbnail-text {
+            font-size: 1.68461vw;
+        }
+
+        .ChallengePostThumbnail-sub {
+            font-size: 1.0769vw;
+            margin-top: 0.3846vw;
+        }
+
+        .ChallengePostCont-date {
+            font-size: 1.42307vw;
+            margin-bottom: 0.53076vw;
+        }
+
+        .ChallengePostCont-title {
+            font-size: 3.20769vw;
+        }
+
+        .ChallengePostCont-title:after {
+            width: 0.7692vw;
+            height: 0.7692vw;
+        }
+
+        .ChallengeList-left .ChallengePostCont-title:after {
+            left: -4.1307vw;
+        }
+
+        .ChallengeList-right .ChallengePostCont-title:after {
+            right: -4.3307vw;
+        }
+
+        .ChallengeListItem-yeartext {
+            font-size: 8.4615vw;
+        }
+
+        .ChallengeListItem-year {
+            top: -1.1538vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .ChallengePostThumbnail {
+            max-width: none;
+        }
+
+        .ChallengePostCont {
+            max-width: none;
+        }
+
+        .ChallengeSubText-text {
+            font-size: 4vw;
+            width: 100%;
+        }
+
+        .ChallengeList-item {
+            margin-top: 25.461vw;
+        }
+
+        .ChallengeList {
+            padding-bottom: 1.5384vw;
+            padding-left: 0;
+            margin-left: -6.25vw;
+            margin-right: -6.25vw;
+        }
+
+        .ChallengeList:before {
+            top: 19.4vw;
+            bottom: 0vw;
+            left: 0;
+            display: none;
+        }
+
+        .ChallengePost {
+            margin-top: 16.0769vw;
+        }
+
+        .ChallengePostThumbnail-video {
+            margin-bottom: 4vw;
+        }
+
+        .ChallengePostThumbnail-text {
+            font-size: 3.85vw;
+            padding: 0 6.25vw;
+        }
+
+        .ChallengePostThumbnail-sub {
+            font-size: 3.5vw;
+            margin-top: 0.8846vw;
+            padding: 0 6.25vw;
+        }
+
+        .ChallengePostCont-date {
+            font-size: 3.5vw;
+            margin-bottom: 3.23076vw;
+            color: #fff;
+            background-color: #000;
+            padding: 1.6vw 3.8vw 1vw 6.25vw !important;
+            display: inline-block;
+            margin-left: -6.25vw;
+            transform: skew(0 45deg);
+        }
+
+        .ChallengePostCont-title {
+            font-size: 6.79769vw;
+            padding: 0 !important;
+            margin-left: -0.6vw;
+
+        }
+
+        .ChallengePostCont-title:after {
+            width: 0.7692vw;
+            height: 0.7692vw;
+            display: none;
+        }
+
+        .ChallengeListItem-year {
+            padding: 0 6.25vw;
+            text-align: left !important;
+            position: static;
+            margin-bottom: 8vw;
+            overflow: hidden;
+        }
+
+        .ChallengeListItem-yeartext {
+            font-size: 18.461vw;
+            opacity: 1;
+            transition-property: transform;
+            transition-duration: 0.6s;
+            transform: translateY(110%);
+            position: static !important;
+            margin: 0 !important;
+            inset: 0px !important;
+            width: 100% !important;
+        }
+
+        .ChallengeList-item.is-View .ChallengeListItem-yeartext {
+            transform: translateY(0%);
+        }
+
+        .ChallengePost-inner {
+            display: block;
+        }
+
+        .ChallengePostThumbnail {
+            flex: none;
+            padding: 0 !important;
+        }
+
+        .ChallengePostCont {
+            flex: none;
+            text-align: left !important;
+            margin-top: 0vw;
+            padding: 0 6.25vw !important;
+            margin-bottom: 4vw;
+        }
+
+        .ChallengeSubText.mb140 {
+            margin-bottom: 25.4128vw !important;
+        }
+
+        .ChallengeListItem-year .scrollmagic-pin-spacer {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            inset: 0 !important;
+        }
+    }
+
+    /*=========================================================
+	Game Post
+=========================================================*/
+    /*	Game Post:SingleGameTopBanner
+=========================================================*/
+    .post-template-single-game .site-content {
+        padding-top: 0;
+    }
+
+    .SingleGameHeader {
+        height: 100vh;
+        min-height: 50.30208vw;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: perspective(800px);
+    }
+
+    .SingleGameTopBanner-thubnail:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../img/bg/bg-game-banner.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .SingleGameHeader .site-container {
+        height: 100%;
+        max-width: 1510px;
+    }
+
+    .SingleGameTopBanner {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        right: 40px;
+        transform: translateY(-50%);
+    }
+
+    .SingleGameTopBanner:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTopBanner-thubnail {
+        line-height: 0;
+        width: 1000px;
+        float: right;
+        position: relative;
+    }
+
+    .SingleGameTopBanner-thubnail img {
+        width: 100%;
+    }
+
+    .SingleGameTopBanner-info {
+        position: absolute;
+        top: 48%;
+        left: 110px;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .SingleGameTopBannerTitle {
+        margin-bottom: 22px;
+        animation-name: SingleGameTopBannerText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+
+    .SingleGameTopBanner-text {
+        font-size: 82px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        animation-name: SingleGameTopBannerText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-delay: 0.2s;
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    .SingleGameTopBanner-sub {
+        font-size: 23px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+        animation-name: SingleGameTopBannerText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-delay: 0.4s;
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    .SingleGameTopBannerMeta {
+        margin-top: 55px;
+        animation-name: SingleGameTopBannerText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-delay: 0.6s;
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+
+    @keyframes SingleGameTopBannerText {
+        0% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+
+    .SingleGameTopBannerMeta-list {
+        overflow: hidden;
+        margin: -2px -25px;
+    }
+
+    .SingleGameTopBannerMeta-item {
+        padding: 2px 25px;
+        float: left;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .SingleGameTopBannerMeta-item:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 13px;
+        background-color: #707070;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .SingleGameTopBannerMeta-item:last-child:after {
+        display: none;
+    }
+
+    .SingleGameTopBannerMeta-text {
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #fff;
+        display: block;
+        float: left;
+        margin-right: 20px;
+    }
+
+    .SingleGameTopBannerMeta-text:last-child {
+        margin-right: 0;
+    }
+
+    .SingleGameTopBannerLink {
+        clear: both;
+        float: right;
+        margin-top: 39px;
+        padding-right: 116px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .SingleGameTopBannerLink-list:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTopBannerLink-item {
+        float: left;
+        margin-right: 22px;
+    }
+
+    .SingleGameTopBannerLink-item:last-child {
+        margin-right: 0;
+    }
+
+    .GameIconLink {
+        display: block;
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+        position: relative;
+        padding-right: 26px;
+    }
+
+    .GameIconLink:after {
+        content: '';
+        display: block;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background-image: url(/wp-content/themes/krafton/assets/img/icon/ico-link-w.png);
+        background-size: 14px 14px;
+        transform: translateY(-50%);
+    }
+
+    .GameIconLink .TextHoverLine {
+        background-image: linear-gradient(#fff, #fff);
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .GameIconLink .TextHoverLine {
+            background-image: none;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameCont>.site-container {
+            max-width: 66.6666vw;
+        }
+
+        .SingleGameHeader .site-container {
+            max-width: 78.6458vw;
+        }
+
+        .SingleGameTopBanner-thubnail {
+            width: 52.0833vw;
+        }
+
+        .SingleGameTopBanner {
+            left: 2.0833vw;
+            right: 2.0833vw;
+        }
+
+        .SingleGameTopBanner-info {
+            left: 5.72916vw;
+        }
+
+        .SingleGameTopBannerTitle {
+            margin-bottom: 1.1458vw;
+        }
+
+        .SingleGameTopBanner-text {
+            font-size: 4.2708vw;
+        }
+
+        .SingleGameTopBanner-sub {
+            font-size: 1.19791vw;
+        }
+
+        .SingleGameTopBannerMeta {
+            margin-top: 2.8645vw;
+        }
+
+        .SingleGameTopBannerMeta-list {
+            margin: -0.1041vw -1.30208vw;
+        }
+
+        .SingleGameTopBannerMeta-item {
+            padding: 0.1041vw 1.30208vw;
+        }
+
+        .SingleGameTopBannerMeta-item:after {
+            height: 0.67708vw;
+        }
+
+        .SingleGameTopBannerMeta-text {
+            font-size: 0.8333vw;
+            margin-right: 1.04166vw;
+        }
+
+        .SingleGameTopBannerLink {
+            margin-top: 2.03125vw;
+            padding-right: 6.0416vw;
+        }
+
+        .SingleGameTopBannerLink-item {
+            margin-right: 1.1458vw;
+        }
+
+        .GameIconLink {
+            font-size: 0.83333vw;
+            padding-right: 1.35416vw;
+        }
+
+        .GameIconLink:after {
+            width: 0.7291vw;
+            height: 0.7291vw;
+            background-size: 0.7291vw 0.7291vw;
+        }
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .GameIconLink {
+            font-size: 1.03333vw;
+            padding-right: 1.65416vw;
+            margin-top: 0.1vw;
+        }
+
+        .GameIconLink:after {
+            width: 0.9291vw;
+            height: 0.9291vw;
+            background-size: 0.9291vw 0.9291vw;
+        }
+
+        .SingleGameTopBannerMeta-text {
+            font-size: 1.03333vw;
+        }
+
+        .SingleGameTopBanner-sub {
+            font-size: 1.39791vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameHeader {
+            height: 90vw;
+            max-width: none;
+            margin-bottom: 0;
+        }
+
+        .SingleGameHeader .site-container {
+            max-width: 100vw;
+            overflow: visible;
+        }
+
+        .SingleGameTopBanner-thubnail {
+            width: 78.802vw;
+        }
+
+        .SingleGameTopBanner-info {
+            left: 0;
+        }
+
+        .SingleGameTopBanner {
+            left: 2.607vw;
+            right: 0;
+        }
+
+        .SingleGameTopBannerTitle {
+            margin-bottom: 1.6458vw;
+        }
+
+        .SingleGameTopBanner-text {
+            font-size: 7.75vw;
+        }
+
+        .SingleGameTopBanner-sub {
+            font-size: 2.99791vw;
+        }
+
+        .SingleGameTopBannerMeta {
+            margin-top: 4.0645vw;
+        }
+
+        .SingleGameTopBannerMeta-list {
+            margin: -0.1041vw -2.00208vw;
+        }
+
+        .SingleGameTopBannerMeta-item {
+            padding: 0.1041vw 2.00208vw;
+        }
+
+        .SingleGameTopBannerMeta-item:after {
+            height: 1.87708vw;
+        }
+
+        .SingleGameTopBannerMeta-text {
+            font-size: 2.2333vw;
+            margin-right: 1.04166vw;
+        }
+
+        .SingleGameTopBannerLink {
+            margin-top: 4.03125vw;
+            padding-right: 2.607vw;
+        }
+
+        .SingleGameTopBannerLink-item {
+            margin-right: 3.1458vw;
+        }
+
+        .GameIconLink {
+            font-size: 1.83333vw;
+            padding-right: 3.75416vw;
+        }
+
+        .GameIconLink:after {
+            width: 2.3291vw;
+            height: 2.3291vw;
+            background-size: 2.3291vw 2.3291vw;
+            margin-top: -0.1vw;
+        }
+
+        .SingleGameTopBanner-thubnail:after {
+            background-size: 165% 100%;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameHeader {
+            height: 100vh;
+            max-width: none;
+            margin-bottom: 0;
+            min-height: 120vw;
+        }
+
+        .SingleGameHeader .site-container {
+            max-width: 100vw;
+            overflow: visible;
+        }
+
+        .SingleGameTopBanner-thubnail {
+            width: 84.802vw;
+        }
+
+        .SingleGameTopBanner-info {
+            left: 0;
+            top: 44%;
+        }
+
+        .SingleGameTopBanner {
+            left: 6.25vw;
+            right: 0;
+        }
+
+        .SingleGameTopBannerTitle {
+            margin-bottom: 1.6458vw;
+        }
+
+        .SingleGameTopBanner-text {
+            font-size: 9.2708vw;
+        }
+
+        html[lang="en-US"] .SingleGameTopBanner-text {
+            font-size: 8.2708vw;
+        }
+
+        html[lang="zh-CN"] .SingleGameTopBanner-text {
+            font-size: 8.2708vw;
+        }
+
+        .SingleGameTopBanner-sub {
+            font-size: 3.99791vw;
+        }
+
+        .SingleGameTopBannerMeta {
+            margin-top: 4.0645vw;
+        }
+
+        .SingleGameTopBannerMeta-list {
+            margin: -0.1041vw -2.00208vw;
+        }
+
+        .SingleGameTopBannerMeta-item {
+            padding: 0.1041vw 2.00208vw;
+        }
+
+        .SingleGameTopBannerMeta-item:after {
+            height: 2.87708vw;
+        }
+
+        .SingleGameTopBannerMeta-text {
+            font-size: 3.2333vw;
+            margin-right: 1.04166vw;
+        }
+
+        .SingleGameTopBannerLink {
+            margin-top: 6.03125vw;
+            padding-right: 6.25vw;
+        }
+
+        .SingleGameTopBannerLink-item {
+            margin-right: 4.1458vw;
+        }
+
+        .GameIconLink {
+            font-size: 3.43333vw;
+            padding-right: 4.75416vw;
+        }
+
+        .GameIconLink:after {
+            width: 3.3291vw;
+            height: 3.3291vw;
+            background-size: 3.3291vw 3.3291vw;
+            margin-top: -0.1vw;
+        }
+
+        .SingleGameTopBanner-thubnail:after {
+            background-size: 165% 100%;
+        }
+    }
+
+    /*	Game Post:SingleGameTempFullPhoto 
+=========================================================*/
+    .SingleGameCont>.site-container {
+        overflow: visible;
+    }
+
+    .SingleGameTempFullPhoto {
+        position: relative;
+        clear: both;
+        margin-bottom: 90px;
+    }
+
+    .SingleGameTempFullPhoto:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .SingleGameTempFullPhoto-row {
+        position: relative;
+        transform: scale(0.5);
+        transform-origin: center;
+    }
+
+    .SingleGameTempFullPhoto-row:after {
+        content: "";
+        display: block;
+        padding-bottom: 90%;
+    }
+
+    .SingleGameTempFullPhoto-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .SingleGameTempFullPhoto iframe {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .SingleGameTempFullPhoto-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 5;
+    }
+
+    .SingleGameTempFullPhoto-icon {
+        width: 148px;
+        height: 104px;
+        background-image: url(../img/icon/ico-youtube-play.png);
+        background-size: 148px 104px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition-property: opacity;
+        transition-duration: 0.2s;
+        z-index: 5;
+        opacity: 0.5;
+    }
+
+    @media screen and (min-width: 1025px) {
+        .SingleGameTempFullPhoto-icon:hover {
+            opacity: 1;
+        }
+    }
+
+    .SingleGameTempFullPhoto-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        max-width: none;
+        height: 100%;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .SingleGameTempFullPhoto-img {
+            transition-duration: 0s;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempFullPhoto {
+            margin-bottom: 6.92307vw;
+        }
+
+        .SingleGameTempFullPhoto-icon {
+            width: 11.3846vw;
+            height: 8vw;
+            background-size: 11.3846vw 8vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempFullPhoto-row {
+            transform: scale(1);
+        }
+
+        .SingleGameTempFullPhoto-link {
+            display: none;
+        }
+
+        .SingleGameTempFullPhoto iframe {
+            display: block;
+        }
+
+        .SingleGameTempFullPhoto-row:after {
+            padding-bottom: 60%;
+        }
+
+
+        .SingleGameTempFullPhoto-row {
+            position: static !important;
+            margin: 0 !important;
+            inset: 0px !important;
+            width: 100% !important;
+        }
+
+        .SingleGameTempFullPhoto .scrollmagic-pin-spacer {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            inset: 0 !important;
+        }
+
+        .SingleGameTempFullPhoto {
+            margin-bottom: 10.92307vw;
+        }
+
+        .SingleGameTempFullPhoto-icon {
+            width: 11.3846vw;
+            height: 8vw;
+            background-size: 11.3846vw 8vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempFullPhoto-row {
+            transform: scale(1);
+        }
+
+        .SingleGameTempFullPhoto-link {
+            display: none;
+        }
+
+        .SingleGameTempFullPhoto iframe {
+            display: block;
+        }
+
+        .SingleGameTempFullPhoto-row:after {
+            padding-bottom: 66%;
+        }
+
+
+        .SingleGameTempFullPhoto-row {
+            position: static !important;
+            margin: 0 !important;
+            inset: 0px !important;
+            width: 100% !important;
+        }
+
+        .SingleGameTempFullPhoto .scrollmagic-pin-spacer {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            inset: 0 !important;
+        }
+
+        .SingleGameTempFullPhoto {
+            margin-bottom: 23.6923vw;
+        }
+
+        .SingleGameTempFullPhoto-icon {
+            width: 11.3846vw;
+            height: 8vw;
+            background-size: 11.3846vw 8vw;
+        }
+    }
+
+    /*	Game Post:SingleGameTempLeft 
+=========================================================*/
+    .SingleGameTempLeft {
+        clear: both;
+        margin-left: -216px;
+        margin-right: -216px;
+        position: relative;
+        margin-bottom: 160px;
+    }
+
+    .SingleGameTempLeft:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTempLeftTumb {
+        width: 995px;
+        line-height: 0;
+        float: left;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .SingleGameTempLeftTumb:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 5;
+    }
+
+    .SingleGameTempLeftTumb:after {
+        content: "";
+        display: block;
+        padding-bottom: 56%;
+    }
+
+    .SingleGameTempLeftTumb-img {
+        position: absolute;
+        top: 0;
+        left: -20%;
+        max-width: none;
+        width: auto;
+        height: 140%;
+        will-change: transform;
+    }
+
+    .SingleGameTempLeftCont {
+        position: relative;
+        width: calc(100% - 995px);
+        padding-top: 110px;
+        z-index: 5;
+        float: right;
+    }
+
+    .SingleGameTempLeftCont-inner {
+        margin-left: calc(-50% + 90px);
+        padding-right: 90px;
+    }
+
+    .SingleGameTempLeftCont-title {
+        font-size: 50px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .SingleGameTempLeftCont-sub {
+        margin-top: 32px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.7em;
+        color: #fff;
+    }
+
+    .SingleGameTempLeftCont-text {
+        margin-top: 32px;
+        font-size: 20px;
+        line-height: 1.7em;
+        color: #fff;
+    }
+
+
+
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempLeft {
+            margin-left: -11.25vw;
+            margin-right: -11.25vw;
+            margin-bottom: 8.3333vw;
+        }
+
+        .SingleGameTempLeftTumb {
+            width: 51.822vw;
+        }
+
+        .SingleGameTempLeftCont {
+            width: calc(100% - 51.822vw);
+            padding-top: 5.72916vw;
+        }
+
+        .SingleGameTempLeftCont-inner {
+            margin-left: calc(-50% + 4.6875vw);
+            padding-right: 4.6875vw;
+        }
+
+        .SingleGameTempLeftCont-title {
+            font-size: 2.6041vw;
+        }
+
+        .SingleGameTempLeftCont-text {
+            margin-top: 1.666vw;
+            font-size: 1.0416vw;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .SingleGameTempLeftCont-text {
+            font-size: 1.1016vw;
+        }
+
+        .SingleGameTempNoImgLeftCont-text {
+            font-size: 1.1016vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempLeft {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 10.3333vw;
+        }
+
+        .SingleGameTempLeftTumb {
+            width: 60.822vw;
+        }
+
+        .SingleGameTempLeftCont {
+            width: calc(100% - 60.822vw);
+            padding-top: 5.72916vw;
+        }
+
+        .SingleGameTempLeftCont-inner {
+            margin-left: calc(-60% + 4.6875vw);
+            padding-right: 4.6875vw;
+        }
+
+        .SingleGameTempLeftCont-title {
+            font-size: 3.6041vw;
+        }
+
+        .SingleGameTempLeftCont-text {
+            margin-top: 1.666vw;
+            font-size: 1.73846vw;
+        }
+
+
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempLeft {
+            margin-left: -6.25vw;
+            margin-bottom: 13.6923vw;
+            margin-right: 0;
+        }
+
+        .SingleGameTempLeftTumb {
+            width: calc(100vw - 6.25vw);
+        }
+
+        .SingleGameTempLeftCont {
+            width: 100%;
+            padding-top: 5.72916vw;
+            position: static;
+            clear: both;
+            float: left;
+        }
+
+        .SingleGameTempLeftCont-inner {
+            margin-left: 0;
+            padding-left: 6.25vw;
+            padding-right: 0;
+            float: none;
+        }
+
+        .SingleGameTempLeftCont-title {
+            font-size: 6.4384vw;
+        }
+
+        .SingleGameTempLeftCont-text {
+            margin-top: 3.6923vw;
+            font-size: 3.73846vw;
+        }
+
+
+
+
+    }
+
+    /*	Game Post:SingleGameTempRight
+=========================================================*/
+    .SingleGameTempRight {
+        clear: both;
+        margin-left: -216px;
+        margin-right: -216px;
+        position: relative;
+        margin-bottom: 160px;
+    }
+
+    .SingleGameTempRight:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTempRightTumb {
+        width: 995px;
+        line-height: 0;
+        float: right;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .SingleGameTempRightTumb:before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background-color: rgba(0, 0, 0, 0.1);
+        z-index: 5;
+    }
+
+    .SingleGameTempRightTumb:after {
+        content: "";
+        display: block;
+        padding-bottom: 56%;
+    }
+
+    .SingleGameTempRightTumb-img {
+        position: absolute;
+        bottom: 0;
+        left: -20%;
+        max-width: none;
+        width: auto;
+        height: 140%;
+        will-change: transform;
+    }
+
+    .SingleGameTempRightCont {
+        position: relative;
+        width: calc(100% - 995px);
+        padding-top: 110px;
+        z-index: 5;
+        float: left;
+    }
+
+    .SingleGameTempRightCont-inner {
+        margin-right: calc(-50% + 90px);
+        padding-left: 90px;
+    }
+
+    .SingleGameTempRightCont-title {
+        font-size: 50px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .SingleGameTempRightCont-sub {
+        margin-top: 32px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.7em;
+        color: #fff;
+    }
+
+    .SingleGameTempRightCont-text {
+        margin-top: 32px;
+        font-size: 20px;
+        line-height: 1.7em;
+        color: #fff;
+    }
+
+    .SingleGameTempRightCont-sub+.SingleGameTempRightCont-text {
+        margin-top: 6px;
+    }
+
+    .SingleGameTempRightCont-text li:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTempRightCont-bullet {
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .SingleGameTempRightCont-bulletText {
+        display: block;
+        overflow: hidden;
+    }
+
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempRight {
+            margin-left: -11.25vw;
+            margin-right: -11.25vw;
+            margin-bottom: 8.3333vw;
+        }
+
+        .SingleGameTempRightTumb {
+            width: 51.822vw;
+        }
+
+        .SingleGameTempRightCont {
+            width: calc(100% - 51.822vw);
+            padding-top: 5.72916vw;
+        }
+
+        .SingleGameTempRightCont-inner {
+            padding-left: 4.6875vw;
+            margin-right: calc(-50% + 4.6875vw);
+        }
+
+
+        .SingleGameTempRightCont-title {
+            font-size: 2.6041vw;
+        }
+
+        .SingleGameTempRightCont-sub {
+            margin-top: 1.666vw;
+            font-size: 1.5384vw;
+        }
+
+        .SingleGameTempRightCont-text {
+            margin-top: 1.666vw;
+            font-size: 1.0416vw;
+        }
+
+        .SingleGameTempRightCont-sub+.SingleGameTempRightCont-text {
+            margin-top: 0.4615vw;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .SingleGameTempRightCont-text {
+            font-size: 1.1016vw;
+        }
+
+        .SingleGameTempNoImgRightCont-text {
+            font-size: 1.1016vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempRight {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 10.3333vw;
+        }
+
+        .SingleGameTempRightTumb {
+            width: 60.822vw;
+        }
+
+        .SingleGameTempRightCont {
+            width: calc(100% - 60.822vw);
+            padding-top: 5.72916vw;
+        }
+
+        .SingleGameTempRightCont-inner {
+            margin-right: calc(-60% + 4.6875vw);
+            padding-left: 4.6875vw;
+        }
+
+        .SingleGameTempRightCont-title {
+            font-size: 3.6041vw;
+        }
+
+        .SingleGameTempRightCont-sub {
+            margin-top: 1.666vw;
+            font-size: 1.9531vw;
+        }
+
+        .SingleGameTempRightCont-text {
+            margin-top: 1.666vw;
+            font-size: 1.73846vw;
+        }
+
+        .SingleGameTempRightCont-sub+.SingleGameTempRightCont-text {
+            margin-top: 0.5859vw;
+        }
+
+        /*no image*/
+        .SingleGameTempNoImgRight {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 10.3333vw;
+        }
+
+        .SingleGameTempNoImgRightCont-inner {
+            padding-left: 0;
+        }
+
+        .SingleGameTempNoImgRightCont-title {
+            font-size: 3.6041vw;
+        }
+
+        .SingleGameTempNoImgRightCont-sub {
+            margin-top: 1.666vw;
+            font-size: 1.9531vw;
+        }
+
+        .SingleGameTempNoImgRightCont-text {
+            margin-top: 1.666vw;
+            font-size: 1.73846vw;
+        }
+
+        .SingleGameTempNoImgRightCont-sub+.SingleGameTempNoImgRightCont-text {
+            margin-top: 0.5859vw;
+        }
+    }
+
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempRight {
+            margin-right: -6.25vw;
+            margin-bottom: 13.6923vw;
+            margin-left: 0;
+        }
+
+        .SingleGameTempRightTumb {
+            width: calc(100vw - 6.25vw);
+        }
+
+        .SingleGameTempRightCont {
+            width: 100%;
+            padding-top: 5.72916vw;
+            position: static;
+            clear: both;
+            float: left;
+            text-align: right;
+        }
+
+        .SingleGameTempRightCont-bullet {
+            float: none;
+            margin-right: 0;
+            margin-left: 5px;
+            display: inline;
+            vertical-align: middle;
+        }
+
+        .SingleGameTempRightCont-bulletText {
+            display: inline;
+            vertical-align: middle;
+        }
+
+        .SingleGameTempRightCont-inner {
+            margin-right: 0;
+            padding-right: 6.25vw;
+            padding-left: 0;
+            float: none;
+        }
+
+        .SingleGameTempRightCont-title {
+            font-size: 6.4384vw;
+        }
+
+        .SingleGameTempRightCont-sub {
+            margin-top: 3.6923vw;
+            font-size: 4vw;
+        }
+
+        .SingleGameTempRightCont-text {
+            margin-top: 3.6923vw;
+            font-size: 3.73846vw;
+        }
+
+        .SingleGameTempRightCont-sub+.SingleGameTempRightCont-text {
+            margin-top: 0.7822vw;
+        }
+
+
+    }
+
+
+    /*	Game Post:SingleGameTempCount
+=========================================================*/
+    .SingleGameTempCount {
+        margin-bottom: 150px;
+    }
+
+    .SingleGameTempCount-item {
+        margin-top: 80px;
+    }
+
+    .SingleGameTempCount-item:first-child {
+        margin-top: 0px;
+    }
+
+    .SingleGameTempCountItem {
+        text-align: center;
+    }
+
+    .SingleGameTempCountItemTitle {
+        font-size: 20px;
+        line-height: 1.3em;
+        color: #fff;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .SingleGameTempCountItemNumber {
+        font-size: 70px;
+        line-height: 1.1em;
+        color: #fff;
+        font-weight: 300;
+        font-family: 'Lato';
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempCount {
+            margin-bottom: 7.8125vw;
+        }
+
+        .SingleGameTempCount-item {
+            margin-top: 4.16666vw;
+        }
+
+        .SingleGameTempCountItemTitle {
+            font-size: 1.04166vw;
+            margin-bottom: 0.78125vw;
+        }
+
+        .SingleGameTempCountItemNumber {
+            font-size: 3.645833vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempCount {
+            margin-bottom: 12.8125vw;
+        }
+
+        .SingleGameTempCount-item {
+            margin-top: 4.16666vw;
+        }
+
+        .SingleGameTempCountItemTitle {
+            font-size: 2.04166vw;
+            margin-bottom: 0.78125vw;
+        }
+
+        .SingleGameTempCountItemNumber {
+            font-size: 5.045833vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempCount {
+            margin-bottom: 18.8125vw;
+        }
+
+        .SingleGameTempCount-item {
+            margin-top: 8.16666vw;
+        }
+
+        .SingleGameTempCountItemTitle {
+            font-size: 5.0384vw;
+            margin-bottom: 2.78125vw;
+        }
+
+        .SingleGameTempCountItemNumber {
+            font-size: 8.045833vw;
+        }
+    }
+
+
+    /*	Game Post:SingleGameTempList
+=========================================================*/
+    .SingleGameTempList {
+        margin-bottom: 100px;
+    }
+
+    .SingleGameTempList-inner:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTempListTitle {
+        float: left;
+        min-width: 250px;
+        margin-right: 50px;
+        min-height: 1px;
+    }
+
+    .SingleGameTempListTitle-title {
+        display: block;
+    }
+
+    .SingleGameTempListTitle-text {
+        font-size: 30px;
+        line-height: 1.3em;
+        color: #fff;
+        font-weight: 500;
+        font-family: 'Poppins';
+        display: block;
+    }
+
+    .SingleGameTempListCont {
+        overflow: hidden;
+    }
+
+    .SingleGameTempListCont-item {
+        margin-top: 32px;
+    }
+
+    .SingleGameTempListCont-item:first-child {
+        margin-top: 0;
+    }
+
+    .SingleGameTempAtc-title {
+        font-size: 20px;
+        line-height: 1.4em;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .SingleGameTempAtc-text {
+        font-size: 16px;
+        line-height: 1.6em;
+        color: #fff;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+
+    .SingleGameTempAtc-link {
+        display: inline-block;
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5em;
+        color: #999999;
+        font-weight: 500;
+        padding-right: 21px;
+    }
+
+    .SingleGameTempAtc-link:after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-image: url(../img/icon/ico-gray-window.png);
+        background-size: 14px 14px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .SingleGameTempAtc-link .TextHoverLine {
+        background-image: linear-gradient(#999999, #999999);
+    }
+
+    .SingleGameTempList.NoScript .SingleGameTempListTitle-text {
+        position: static !important;
+        margin: 0 !important;
+        inset: 0px !important;
+        width: 100% !important;
+    }
+
+    .SingleGameTempList.NoScript .SingleGameTempListTitle .scrollmagic-pin-spacer {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        inset: 0 !important;
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .SingleGameTempAtc-link .TextHoverLine {
+            background-image: none;
+        }
+    }
+
+    .SingleGameStore {
+        margin-top: 32px;
+    }
+
+    .SingleGameStore-list {
+        overflow: hidden;
+        margin: 0 -10px;
+    }
+
+    .SingleGameStore-item {
+        padding: 0 10px;
+        float: left;
+    }
+
+    .SingleGameStoreItem-link {
+        display: block;
+        line-height: 0;
+        border: solid 1px #393939;
+        padding: 7px 15px;
+    }
+
+    .SingleGameStoreItem-link img {
+        height: 55px;
+    }
+
+
+
+
+    @media screen and (min-width: 1025px) {
+        .SingleGameStoreItem-link:hover {
+            border: solid 1px #fff;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempList {
+            margin-bottom: 5.20833vw;
+        }
+
+        .SingleGameTempListTitle {
+            min-width: 13.0208vw;
+            margin-right: 2.60416vw;
+        }
+
+        .SingleGameTempListTitle-text {
+            font-size: 1.5625vw;
+        }
+
+        .SingleGameTempListCont-item {
+            margin-top: 1.66666vw;
+        }
+
+        .SingleGameTempAtc-title {
+            font-size: 1.04166vw;
+        }
+
+        .SingleGameTempAtc-text {
+            font-size: 0.8333vw;
+            margin-top: 0.52083vw;
+        }
+
+        .SingleGameTempAtc-link {
+            font-size: 0.8333vw;
+            padding-right: 1.09375vw;
+        }
+
+        .SingleGameTempAtc-link:after {
+            width: 0.729166vw;
+            height: 0.729166vw;
+            background-size: 0.729166vw 0.729166vw;
+        }
+
+        .SingleGameStore {
+            margin-top: 1.6666vw;
+        }
+
+        .SingleGameStore-list {
+            margin: 0 -0.52083vw;
+        }
+
+        .SingleGameStore-item {
+            padding: 0 0.52083vw;
+        }
+
+        .SingleGameStoreItem-link {
+            padding: 0.36458vw 0.78125vw;
+        }
+
+        .SingleGameStoreItem-link img {
+            height: 2.86458vw;
+        }
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .SingleGameTempListTitle-text {
+            font-size: 1.7625vw;
+        }
+
+        .SingleGameTempAtc-title {
+            font-size: 1.14166vw;
+        }
+
+        .SingleGameTempAtc-text {
+            font-size: 1.0333vw;
+        }
+
+        .SingleGameTempAtc-link {
+            padding-right: 1.39375vw;
+        }
+
+        .SingleGameTempAtc-link:after {
+            width: 0.929166vw;
+            height: 0.929166vw;
+            background-size: 0.929166vw 0.929166vw;
+            margin-top: 0.1vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempList {
+            margin-bottom: 9.20833vw;
+        }
+
+        .SingleGameTempListTitle {
+            min-width: 20.0208vw;
+            margin-right: 2.60416vw;
+        }
+
+        .SingleGameTempListTitle-text {
+            font-size: 3.5625vw;
+        }
+
+        .SingleGameTempListCont-item {
+            margin-top: 2.66666vw;
+        }
+
+        .SingleGameTempAtc-title {
+            font-size: 1.74166vw;
+        }
+
+        .SingleGameTempAtc-text {
+            font-size: 1.4333vw;
+            margin-top: 0.82083vw;
+        }
+
+        .SingleGameTempAtc-link {
+            font-size: 1.4333vw;
+            padding-right: 2.09375vw;
+        }
+
+        .SingleGameTempAtc-link:after {
+            width: 1.229166vw;
+            height: 1.229166vw;
+            background-size: 1.229166vw 1.229166vw;
+        }
+
+        .SingleGameStore {
+            margin-top: 4.66666vw;
+        }
+
+        .SingleGameStore-list {
+            margin: 0 -0.52083vw;
+        }
+
+        .SingleGameStore-item {
+            padding: 0 0.52083vw;
+        }
+
+        .SingleGameStoreItem-link {
+            padding: 0.36458vw 0.78125vw;
+        }
+
+        .SingleGameStoreItem-link img {
+            height: 5.86458vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempList {
+            margin-bottom: 13.80833vw;
+        }
+
+        .SingleGameTempListTitle {
+            min-width: 20.0208vw;
+            margin-right: 0;
+            float: none;
+            margin-bottom: 6vw;
+            overflow: hidden;
+        }
+
+        .SingleGameTempListTitle-text {
+            position: static !important;
+            margin: 0 !important;
+            inset: 0px !important;
+            width: 100% !important;
+            font-size: 10.53846vw;
+        }
+
+        .SingleGameTempListTitle-text br {
+            display: none;
+        }
+
+        .SingleGameTempListTitle .scrollmagic-pin-spacer {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            inset: 0 !important;
+        }
+
+        .SingleGameTempListCont-item {
+            margin-top: 5.66666vw;
+        }
+
+        .SingleGameTempAtc-title {
+            font-size: 4.04166vw;
+        }
+
+        .SingleGameTempAtc-text {
+            font-size: 3.4333vw;
+            margin-top: 1.82083vw;
+        }
+
+        .SingleGameTempAtc-link {
+            font-size: 3.4333vw;
+            padding-right: 4.09375vw;
+        }
+
+        .SingleGameTempAtc-link:after {
+            width: 2.729166vw;
+            height: 2.729166vw;
+            background-size: 2.729166vw 2.729166vw;
+        }
+
+        .SingleGameStore {
+            margin-top: 7.77666vw;
+        }
+
+        .SingleGameStore-list {
+            margin: 0 -1.52083vw;
+        }
+
+        .SingleGameStore-item {
+            padding: 0 1.52083vw;
+        }
+
+        .SingleGameStoreItem-link {
+            padding: 0.36458vw 0.78125vw;
+        }
+
+        .SingleGameStoreItem-link img {
+            height: 9.86458vw;
+        }
+
+        .SingleGameTempListTitle-title {
+            transition-property: transform;
+            transition-duration: 0.6s;
+            transition-timing-function: ease-out;
+            transform: translateY(110%);
+        }
+
+        .is-Opacity .SingleGameTempListTitle-title {
+            transform: translateY(0%);
+        }
+
+        .SingleGameTempListCont {
+            transition-property: opacity;
+            transition-duration: 0.6s;
+            transition-delay: 0.6s;
+            transition-timing-function: ease-out;
+            opacity: 0;
+        }
+
+        .is-Opacity .SingleGameTempListCont {
+            opacity: 1;
+        }
+    }
+
+    /*	Game Post:SingleGameTempStudio
+=========================================================*/
+    .SingleGameTempStudio {
+        margin-top: 110px;
+        border-top: solid 1px #fff;
+        border-bottom: solid 1px #fff;
+    }
+
+    .SingleGameTempStudio-link {
+        padding: 50px 0 40px;
+        padding-right: 300px;
+        display: block;
+        position: relative;
+    }
+
+    .SingleGameTempStudio-link:before {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition-property: width, background-color;
+        transition-duration: 0.4s;
+        transition-timing-function: ease-out;
+    }
+
+    .SingleGameTempStudioThumb {
+        line-height: 0;
+        position: absolute;
+        top: 50%;
+        right: 75px;
+        transform: translateY(-50%);
+        max-width: 140px;
+        width: 100%;
+    }
+
+    .SingleGameTempStudioThumb.Logo-Pubg {
+        max-width: 140px;
+    }
+
+    .SingleGameTempStudioThumb.Logo-Bluehole {
+        max-width: 309px;
+    }
+
+    .SingleGameTempStudioThumb.Logo-Risingwings {
+        max-width: 155px;
+    }
+
+    .SingleGameTempStudioThumb.Logo-Dreammotion {
+        max-width: 267px;
+    }
+
+    .SingleGameTempStudioMeta {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 7px;
+    }
+
+    .SingleGameTempStudioMeta-item {
+        font-size: 13px;
+        line-height: 1.2em;
+        color: #fff;
+        display: inline-block;
+        vertical-align: middle;
+        padding-right: 13px;
+        margin-right: 12px;
+        position: relative;
+        font-family: 'Poppins';
+    }
+
+    .SingleGameTempStudioMeta-item:after {
+        content: "";
+        width: 1px;
+        height: 11px;
+        background-color: #BCBCBC;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+    }
+
+    .SingleGameTempStudioMeta-item:last-child {
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .SingleGameTempStudioMeta-item:last-child:after {
+        display: none;
+    }
+
+    .SingleGameTempStudio-title {
+        font-size: 36px;
+        line-height: 1.3em;
+        color: #fff;
+        font-weight: 500;
+        font-family: 'Poppins';
+    }
+
+    .SingleGameTempStudio-title .TextHoverLine {
+        background-image: linear-gradient(#fff, #fff);
+    }
+
+
+
+    @media screen and (max-width: 1024px) and (min-width: 1px) {
+        .SingleGameTempStudio-title .TextHoverLine {
+            background-image: none;
+        }
+    }
+
+    .SingleGameTempStudio-sub {
+        font-size: 16px;
+        line-height: 1.4em;
+        color: #fff;
+        margin-top: 8px;
+    }
+
+    .SingleGameTempStudio-arrow {
+        width: 27px;
+        height: 10px;
+        margin-top: 48px;
+        background-image: url(../img/icon/ico-post-arrow.png);
+        background-size: 27px 10px;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempStudio {
+            margin-top: 5.72916vw;
+        }
+
+        .SingleGameTempStudio-link {
+            padding: 2.60416vw 0 2.0833vw;
+            padding-right: 15.625vw;
+        }
+
+        .SingleGameTempStudioThumb {
+            right: 3.90625vw;
+            max-width: 7.29166vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Pubg {
+            max-width: 7.29166vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Bluehole {
+            max-width: 16.09375vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Risingwings {
+            max-width: 8.0729vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Dreammotion {
+            max-width: 13.906vw;
+        }
+
+        .SingleGameTempStudioMeta {
+            margin-bottom: 0.36458vw;
+        }
+
+        .SingleGameTempStudioMeta-item {
+            font-size: 0.677083vw;
+            padding-right: 0.677083vw;
+            margin-right: 0.625vw;
+        }
+
+        .SingleGameTempStudioMeta-item:after {
+            height: 0.57291vw;
+        }
+
+        .SingleGameTempStudio-title {
+            font-size: 1.875vw;
+        }
+
+        .SingleGameTempStudio-sub {
+            font-size: 0.8333vw;
+            margin-top: 0.4166vw;
+        }
+
+        .SingleGameTempStudio-arrow {
+            width: 1.40625vw;
+            height: 0.520833vw;
+            margin-top: 2.5vw;
+            background-size: 1.40625vw 0.520833vw;
+        }
+    }
+
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .SingleGameTempStudioMeta-item {
+            font-size: 1.0077083vw;
+        }
+
+        .SingleGameTempStudioMeta-item:after {
+            height: 0.77291vw;
+        }
+
+        .SingleGameTempStudio-title {
+            font-size: 2.175vw;
+        }
+
+        .SingleGameTempStudio-sub {
+            font-size: 1.2vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempStudio {
+            margin-top: 10.72916vw;
+        }
+
+        .SingleGameTempStudio-link {
+            padding: 4.60416vw 0 4.0833vw;
+            padding-right: 15.625vw;
+        }
+
+        .SingleGameTempStudioThumb {
+            right: 3.90625vw;
+            max-width: 7.29166vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Pubg {
+            max-width: 7.29166vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Bluehole {
+            max-width: 16.09375vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Risingwings {
+            max-width: 15.136718vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Dreammotion {
+            max-width: 16.0742vw;
+        }
+
+        .SingleGameTempStudioMeta {
+            margin-bottom: 1.06458vw;
+        }
+
+        .SingleGameTempStudioMeta-item {
+            font-size: 1.677083vw;
+            padding-right: 0.977083vw;
+            margin-right: 0.925vw;
+        }
+
+        .SingleGameTempStudioMeta-item:after {
+            height: 1.37291vw;
+        }
+
+        .SingleGameTempStudio-title {
+            font-size: 4.275vw;
+        }
+
+        .SingleGameTempStudio-sub {
+            font-size: 1.5333vw;
+            margin-top: 1.6166vw;
+        }
+
+        .SingleGameTempStudio-arrow {
+            width: 2.40625vw;
+            height: 1.020833vw;
+            margin-top: 3.5vw;
+            background-size: 2.40625vw 1.020833vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempStudio {
+            margin-top: 15.72916vw;
+        }
+
+        .SingleGameTempStudio-link {
+            padding: 8.60416vw 0 8.0833vw;
+            padding-right: 0;
+        }
+
+        .SingleGameTempStudioThumb {
+            position: static;
+            max-width: 20vw;
+            transform: translateY(0%);
+            margin-bottom: 6vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Pubg {
+            max-width: 20vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Bluehole {
+            max-width: 40vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Risingwings {
+            max-width: 20vw;
+        }
+
+        .SingleGameTempStudioThumb.Logo-Dreammotion {
+            max-width: 40vw;
+        }
+
+        .SingleGameTempStudioMeta {
+            margin-bottom: 2.06458vw;
+        }
+
+        .SingleGameTempStudioMeta-item {
+            font-size: 3.277083vw;
+            padding-right: 2.977083vw;
+            margin-right: 2.925vw;
+        }
+
+        .SingleGameTempStudioMeta-item:after {
+            height: 2.37291vw;
+        }
+
+        .SingleGameTempStudio-title {
+            font-size: 6.275vw;
+        }
+
+        .SingleGameTempStudio-sub {
+            font-size: 3.3333vw;
+            margin-top: 2.6166vw;
+            line-height: 1.7em;
+        }
+
+        .SingleGameTempStudio-arrow {
+            width: 9.0769vw;
+            height: 2.5769vw;
+            background-size: 9.0769vw 2.5769vw;
+            margin-top: 8.5vw;
+        }
+    }
+
+    /*	Game Post:Bullet
+=========================================================*/
+    .SingleGameTempLeftCont-text li:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .SingleGameTempLeftCont-bullet {
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+
+    .SingleGameTempLeftCont-bulletText {
+        display: block;
+        overflow: hidden;
+    }
+
+    /*	Game Post:Img List
+=========================================================*/
+    .SingleGameTempImgList {
+        margin-bottom: 160px;
+        margin-left: -110px;
+        margin-right: -110px;
+        clear: both;
+    }
+
+    .SingleGameTempImgList-list {
+        overflow: hidden;
+        margin: 0 -38px;
+    }
+
+    .SingleGameTempImgList-item {
+        padding: 0 38px;
+        width: 33.3333%;
+        float: left;
+        line-height: 0;
+    }
+
+    .SingleGameTempImgList-item {
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    .SingleGameTempImgList-item:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    .SingleGameTempImgList-item:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+
+    .is-Opacity .SingleGameTempImgList-item {
+        opacity: 1;
+    }
+
+
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempImgList {
+            margin-bottom: 8.3333vw;
+            margin-left: -5.72916vw;
+            margin-right: -5.72916vw;
+        }
+
+        .SingleGameTempImgList-list {
+            margin: 0 -1.979166vw;
+        }
+
+        .SingleGameTempImgList-item {
+            padding: 0 1.979166vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempImgList {
+            margin-bottom: 10.3333vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        .SingleGameTempImgList-list {
+            margin: 0 -1.379166vw;
+        }
+
+        .SingleGameTempImgList-item {
+            padding: 0 1.379166vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempImgList {
+            margin-bottom: 17.6923vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        .SingleGameTempImgList-list {
+            margin: 0 -1.379166vw;
+        }
+
+        .SingleGameTempImgList-item {
+            padding: 0 1.379166vw;
+        }
+    }
+
+    /*	Game Post:Img List
+=========================================================*/
+    .SingleGameTempPhotoList {
+        margin-bottom: 160px;
+        margin-left: -110px;
+        margin-right: -110px;
+        clear: both;
+    }
+
+    .SingleGameTempPhotoList-list {
+        overflow: hidden;
+        margin: -20px -20px;
+    }
+
+    .SingleGameTempPhotoList-item {
+        padding: 20px 20px;
+        width: 50%;
+        float: left;
+        line-height: 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .SingleGameTempPhotoList-item:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .SingleGameTempPhotoList-cate {
+        display: block;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 20px;
+        line-height: 1.2em;
+        color: #000;
+        font-family: 'KRAFTON';
+        z-index: 10;
+        display: none;
+    }
+
+    .SingleGameTempPhotoList-item:nth-child(odd) {
+        clear: both;
+    }
+
+    .SingleGameTempPhotoList-item {
+        transition-property: opacity;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+    }
+
+    .SingleGameTempPhotoList-item:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    .SingleGameTempPhotoList-item:nth-child(3) {
+        transition-delay: 0.6s;
+    }
+
+    .SingleGameTempPhotoList-item:nth-child(4) {
+        transition-delay: 0.9s;
+    }
+
+    .is-Opacity .SingleGameTempPhotoList-item {
+        opacity: 1;
+    }
+
+
+
+
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempPhotoList {
+            margin-bottom: 8.3333vw;
+            margin-left: -5.72916vw;
+            margin-right: -5.72916vw;
+        }
+
+        .SingleGameTempPhotoList-list {
+            margin: -1.04166vw -1.04166vw;
+        }
+
+        .SingleGameTempPhotoList-item {
+            padding: 1.04166vw 1.04166vw;
+        }
+
+        .SingleGameTempPhotoList-cate {
+            top: 1.5625vw;
+            left: 1.5625vw;
+            font-size: 1.0416666vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempPhotoList {
+            margin-bottom: 10.3333vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        .SingleGameTempPhotoList-list {
+            margin: -1.04166vw -1.04166vw;
+        }
+
+        .SingleGameTempPhotoList-item {
+            padding: 1.04166vw 1.04166vw;
+        }
+
+        .SingleGameTempPhotoList-cate {
+            top: 2.5625vw;
+            left: 2.5625vw;
+            font-size: 2.0416666vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempPhotoList {
+            margin-bottom: 17.6923vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        .SingleGameTempPhotoList-list {
+            margin: 0 -6.25vw;
+        }
+
+        .SingleGameTempPhotoList-item {
+            padding: 0;
+            width: 100%;
+            float: none;
+            margin-top: 6.25vw;
+        }
+
+        .SingleGameTempPhotoList-item:first-child {
+            margin-top: 0;
+        }
+
+        .SingleGameTempPhotoList-item:nth-child(odd) {
+            padding-left: 6.25vw;
+        }
+
+        .SingleGameTempPhotoList-item:nth-child(even) {
+            padding-right: 6.25vw;
+        }
+
+        .SingleGameTempPhotoList-cate {
+            font-size: 5.0416666vw;
+            top: 3vw;
+        }
+
+        .SingleGameTempPhotoList-item:nth-child(odd) .SingleGameTempPhotoList-cate {
+            left: 9.25vw;
+        }
+
+        .SingleGameTempPhotoList-item:nth-child(even) .SingleGameTempPhotoList-cate {
+            left: auto;
+            right: 9.25vw;
+        }
+    }
+
+    /*	Game Post:TempFullImg
+=========================================================*/
+    .SingleGameTempFullImg {
+        position: relative;
+        clear: both;
+        margin-bottom: 160px;
+        margin-top: 100px;
+    }
+
+    .SingleGameTempFullImg:after {
+        content: "";
+        display: block;
+        padding-bottom: 48.6%;
+    }
+
+    .SingleGameTempFullImg-inner {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+    }
+
+    .SingleGameTempFullImg-img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: none;
+        min-width: 100%;
+        min-height: 150%;
+        max-height: 260%;
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    body.Safari .SingleGameTempFullImg-img {
+        transition-duration: 0s;
+    }
+
+    @media all and (-ms-high-contrast: none),
+    (-ms-high-contrast: active) {
+        .SingleGameTempFullImg-img {
+            transition-duration: 0s;
+        }
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1920px) and (min-width: 1025px) {
+        .SingleGameTempFullImg {
+            margin-bottom: 8.33333vw;
+            margin-top: 5.2083vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .SingleGameTempFullImg {
+            margin-bottom: 10.92307vw;
+            margin-top: 0;
+        }
+
+        .SingleGameTempFullImg-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .SingleGameTempFullImg {
+            margin-bottom: 23.6923vw;
+            margin-left: -20vw;
+            margin-right: -20vw;
+            margin-top: 0;
+        }
+
+        .SingleGameTempFullImg-inner {
+            width: 180vw;
+        }
+
+        .SingleGameTempFullImg:after {
+            padding-bottom: 40%;
+        }
+
+        .SingleGameTempFullImg-img {
+            transition-duration: 0.1s;
+        }
+    }
+
+
+    /*	Game Post:Action
+=========================================================*/
+    .a-ScTop {
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    .a-ScDown {
+        transition-property: transform;
+        transition-duration: 0.2s;
+    }
+
+    body.Safari .a-ScTop {
+        transition-duration: 0s;
+    }
+
+    body.Safari .a-ScDown {
+        transition-duration: 0s;
+    }
+
+    .SingleGameTempLeftCont-title {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .SingleGameTempRightCont-title {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .SingleGameTempLeftCont-sub {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .SingleGameTempRightCont-sub {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .SingleGameTempLeftCont-text {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .SingleGameTempRightCont-text {
+        transition-property: transform, opacity;
+        transition-duration: 0.6s;
+        transition-delay: 0.4s;
+        transition-timing-function: ease-out;
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    .is-GameText .SingleGameTempLeftCont-title {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .is-GameText .SingleGameTempRightCont-title {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .is-GameText .SingleGameTempLeftCont-sub {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .is-GameText .SingleGameTempRightCont-sub {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .is-GameText .SingleGameTempLeftCont-text {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .is-GameText .SingleGameTempRightCont-text {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+
+    /*	Studio:GameTempTextLeft
+=========================================================*/
+    .GameTempTextLeft {
+        width: calc(50% + 43px);
+        margin-left: -110px;
+        margin-top: -22px;
+        float: left;
+        clear: both;
+        margin-bottom: 160px;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .GameTempTextLeft {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .GameTempTextLeft {
+            width: calc(50% - 2.19921vw);
+            margin-left: 0;
+            margin-bottom: 15.625vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .GameTempTextLeft {
+            width: 100%;
+            float: none;
+            margin-bottom: 13.6923vw;
+            margin-left: 0;
+        }
+    }
+
+    /*	Studio:GameTempTextRight
+=========================================================*/
+    .GameTempTextRight {
+        width: calc(50% + 43px);
+        margin-right: -110px;
+        float: right;
+        clear: both;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .GameTempTextRight {
+            width: calc(50% - 2.3076vw);
+            margin-bottom: 5.6923vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .GameTempTextRight {
+            width: calc(50% - 2.19921vw);
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .GameTempTextRight {
+            width: 100%;
+            float: none;
+            margin-right: 0;
+            margin-bottom: 13.6923vw;
+        }
+    }
+
+
+    /*	Studio:StudiosTempText
+=========================================================*/
+    .GameTempTitle {
+        font-size: 0;
+        line-height: 0;
+        margin-bottom: 35px;
+        overflow: hidden;
+    }
+
+    .GameTempTitle-text {
+        font-size: 46px;
+        line-height: 1.3em;
+        color: #fff;
+        font-weight: 500;
+        display: block;
+        transition-property: transform;
+        transition-duration: 0.6s;
+        transition-timing-function: ease-out;
+        transform: translateY(110%);
+    }
+
+    .GameTempTitle.is-textTop .GameTempTitle-text {
+        transform: translateY(0%);
+    }
+
+    .GameTempText {
+        font-size: 20px;
+        line-height: 1.9em;
+        color: #fff;
+    }
+
+    .GameTempText-text {
+        margin-bottom: 39px;
+    }
+
+    .GameTempText-text:last-of-type {
+        margin-bottom: 0;
+    }
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .GameTempTitle {
+            margin-bottom: 2.6923vw;
+        }
+
+        .GameTempTitle-text {
+            font-size: 3.5384vw;
+        }
+
+        .GameTempText {
+            font-size: 1.53846vw;
+        }
+
+        .GameTempText-text {
+            margin-bottom: 3vw;
+        }
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .GameTempTitle {
+            margin-bottom: 2.6923vw;
+        }
+
+        .GameTempTitle-text {
+            font-size: 3.6041vw;
+        }
+
+        .GameTempText {
+            font-size: 1.73846vw;
+        }
+
+        .GameTempText-text {
+            margin-bottom: 3vw;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .GameTempTitle {
+            margin-bottom: 3.6923vw;
+        }
+
+        .GameTempTitle-text {
+            font-size: 6.4384vw;
+            line-height: 1.5em;
+        }
+
+        .GameTempText {
+            font-size: 3.73846vw;
+        }
+
+        .GameTempText-text {
+            margin-bottom: 6vw;
+        }
+    }
+
+    /*=========================================================
+	Toc
+=========================================================*/
+    .Toc {
+        position: absolute;
+        top: 0;
+        right: -100px;
+        width: 100px;
+        display: none;
+    }
+
+    .Toc-inner {
+        position: fixed;
+        width: 136px;
+        z-index: 100;
+        padding-left: 10px;
+        border-left: solid 3px #000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(50px);
+        transition-property: opacity, visibility, transform;
+        transition-duration: 0.2s;
+    }
+
+    .Toc.is-View .Toc-inner {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .Toc-item {
+        margin-top: 8px;
+    }
+
+    .Toc-item:first-child {
+        margin-top: 0;
+    }
+
+    .Toc-link {
+        font-size: 15px;
+        line-height: 1.3em;
+        color: #000;
+        font-weight: 500;
+        display: block;
+    }
+
+    .Toc-link.is-Active .TextHoverLine {
+        background-size: 100% 2px;
+    }
+
+    @media screen and (max-width: 1560px) and (min-width: 1430px) {
+        .Toc {
+            right: -70px;
+        }
+
+        .Toc-inner {
+            padding-left: 5px;
+            border-left: solid 2px #000;
+        }
+
+        .Toc-link {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width: 1429px) and (min-width: 1px) {
+        .Toc {
+            display: none;
+        }
+    }
+
+    /*=========================================================
+	쿠키
+=========================================================*/
+
+    #cookie-law-info-bar[data-cli-style="cli-style-v2"] {
+        padding: 0;
+    }
+
+    .cli-bar-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 20px 40px;
+    }
+
+    .cli-style-v2 .cli-bar-message {
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+
+    .cli-style-v2 .cli-bar-message .wt-cli-ccpa-element {
+        margin-top: 10px;
+    }
+
+    a.wt-cli-ccpa-opt-out {
+        font-size: 14px;
+    }
+
+    .cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
+        padding: 13px 20px;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.3em;
+        border: 2px solid #fff;
+    }
+
+    .cli-tab-container h4 {
+        color: #000;
+        font-weight: bold;
+    }
+
+    .cli-privacy-content-text {
+        color: #000;
+    }
+
+    .cli-modal-content {
+        border-radius: 0;
+    }
+
+    .cli-tab-header {
+        border-radius: 0;
+    }
+
+    .cli-tab-header a:before {
+        border-color: #000;
+    }
+
+    .cli-tab-header a.cli-nav-link {
+        font-weight: 500;
+    }
+
+    .cli-tab-footer .wt-cli-privacy-accept-btn {
+        border: 2px solid #000;
+        font-weight: bold;
+    }
+
+    .cli-switch input:checked+.cli-slider {
+        background-color: #000;
+    }
+
+    .cli-tab-footer .wt-cli-privacy-accept-btn {
+        background-color: #000;
+    }
+
+    .cli-alert-dialog-content {
+        font-size: 13px !important;
+        font-weight: bold;
+    }
+
+    .cli-alert-dialog-buttons {
+        padding-top: 10px !important;
+    }
+
+    body .cli-alert-dialog-buttons button {
+        width: calc(50% - 8px);
+        color: #000 !important;
+        background-color: #fff !important;
+        font-size: 14px !important;
+        border-color: #000 !important;
+        border-radius: 0 !important;
+    }
+
+    body .cli-alert-dialog-buttons .cli-ccpa-button-confirm {
+        color: #fff !important;
+        background-color: #000 !important;
+    }
+
+    #cLiCcpaOptoutPrompt .cli-modal-dialog {
+        max-width: 300px !important;
+        margin: 0 auto;
+    }
+
+    .cli-modal .cli-modal-close {
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    @media screen and (min-width:1025px) {
+
+        .cli-style-v2 .cli-bar-btn_container .cli-plugin-button:hover {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .cli-style-v2 .cli-bar-btn_container .cli-plugin-button.cli_settings_button:hover {
+            background-color: #000 !important;
+            color: #fff !important;
+        }
+
+        .cli-tab-footer .wt-cli-privacy-accept-btn:hover {
+            background-color: #fff;
+            color: #000;
+            border-color: #000;
+        }
+
+        body .cli-alert-dialog-buttons button:hover {
+            color: #fff !important;
+            background-color: #000 !important;
+            border-color: #000 !important;
+        }
+
+        body .cli-alert-dialog-buttons .cli-ccpa-button-confirm:hover {
+            color: #000 !important;
+            background-color: #fff !important;
+        }
+
+    }
+
+
+    /*Responsive*/
+    @media screen and (max-width: 1300px) and (min-width: 1025px) {
+        .cli-bar-container {
+            max-width: 98.461vw;
+            padding: 1.53846vw 3.4769vw;
+        }
+
+        .cli-style-v2 .cli-bar-message {
+            font-size: 1.07692vw;
+        }
+
+        a.wt-cli-ccpa-opt-out {
+            margin-top: 0.923vw;
+            font-size: 1.07692vw;
+        }
+
+        .cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
+            font-size: 1vw;
+            padding: 1vw 3.4615vw;
+        }
+
+
+    }
+
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+        .cli-bar-container {
+            max-width: 98.461vw;
+            padding: 1.93846vw 3.4769vw;
+        }
+
+        .cli-style-v2 .cli-bar-message {
+            font-size: 1.43076vw;
+        }
+
+        a.wt-cli-ccpa-opt-out {
+            margin-top: 0.923vw;
+            font-size: 1.43076vw;
+        }
+
+        .cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
+            font-size: 1.4538vw;
+            padding: 1vw 3.4615vw;
+        }
+    }
+
+    @media (max-width: 985px) {
+        .cli-style-v2 .cli-bar-btn_container {
+            margin-left: -5px;
+        }
+    }
+
+    @media screen and (max-width: 767px) and (min-width: 1px) {
+        .cli-bar-container {
+            max-width: 100%;
+            padding: 4.6923vw 5.607vw;
+        }
+
+        .cli-style-v2 .cli-bar-btn_container {
+            margin-left: -5px !important;
+        }
+
+        .cli-style-v2 .cli-bar-message {
+            font-size: 3.125vw;
+            line-height: 1.6em;
+        }
+
+        a.wt-cli-ccpa-opt-out {
+            margin-top: 1.923vw;
+            font-size: 3.125vw;
+            line-height: 1.6em;
+        }
+
+        .cli-style-v2 .cli-bar-btn_container .cli-plugin-button {
+            font-size: 3.125vw;
+            padding: 2vw 3.4615vw;
+        }
+
+    }

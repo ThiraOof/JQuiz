@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap%27');
+
+body {
+    color: #000;
+}
+
+.valuestory{
+    width:33.33%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+.sen{
+    width:80%;
+    height: 3px;
+    background-color: #000;
+}
+#boxbox{
+    width:100%;
+}
+.whyhowwhat1{
+    width:30%;
+    height:75%;
+}
+.whyhowwhat-text{
+    line-height: 1.2em;
+    color: #000;
+    font-family: 'KRAFTON';
+    font-size: 17px;
+}
+
+.whyhowwhat2{
+    float:right;
+    width:70%;
+    height:75%;
+}
+.arrpic{
+    margin-top: 45px;
+    display: block;
+    width: 40px;
+    height: 13px;
+    background-size: 40px 13px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    background-image: url("https://www.krafton.com/wp-content/themes/krafton/assets/img/icon/ico-more-arrow.png");
+}
+    .chacir{
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #F7F7F7;
+        padding: 72px 72px 72px 72px;
+    line-height: 0;
+    text-align: center;
+}
+.img-circle {
+        width: 1056px;
+        height: 600px;
+}
+
+
+    
+    /* .sairoop{
+        padding: 72px 72px 72px 72px;
+        line-height: 0;
+        text-align: center;
+        background-color: #F7F7F7;
+    } */
+    .MainNews {
+        font-family: 'Noto Sans', sans-serif;
+        padding-top: 220px;
+        overflow: hidden;
+    
+    }
+    .PageHeaderTitle-text {
+        font-family: 'Noto Sans', sans-serif;
+        overflow: hidden;
+        font-size: 100%;
+        font-weight: bold;
+        font-size: 70px;
+        color: #000;
+        transform: translateX(-10px);
+        letter-spacing: 3px;
+}
+        .PageHeaderTitle {
+            
+        display:flex;
+        justify-content: space-between;
+    }
+    .About-nav-text {
+        float: right;
+        padding-top: 14px;  
+    }
+    .site-container {
+    max-width: 1280px;
+    height: 185px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 40px;
+    overflow: hidden;
+    }
+    .MainChallenge {
+        font-family: 'Noto Sans', sans-serif;
+        padding-top: 220px;
+    
+    }
+
+    .ChallengeCircle {
+        max-width: 1280px;
+        height: 884px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+        margin-bottom: 5%;
+    }
+    
+    .About-nav-text {
+        font-size: 14px;
+        line-height: 1.3em;
+        margin:0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .StoryBanner-center{
+    min-width: 100%;
+    position:absolute;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.StoryBanner-inner{
+    height: 403px;
+    overflow:hidden;
+    position:relative;
+    }
+    .vision-container{
+        max-width: 1280px;
+        height: 500px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+    }
+    .vision-para-font{
+        font-family:  "Noto Sans";
+        font-size: 24px;
+        line-height: 1.6em;
+        color:#000;
+    }
+    .value-container {
+        max-width: 1282px;
+        height: 700px;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 40px;
+        overflow: hidden;
+        }
+    .value-head-font{
+        font-size: 40px;
+        font-family: "KRAFTON";
+        line-height: 1em;
+
+    }
+    .value-longhon-font{
+        font-family: 'KRAFTON';
+        font-size: 20px;
+        line-height: 1.6em;
+        color:#DDDDDD;
+    }
+    .chacir-font{
+        font-family: 'Noto Sans', sans-serif;
+        line-height: 1.8em;
+        color:#000000;
+        font-size: 20px;
+        font-weight: normal;
+        width: 115%;
+    }
+    @keyframes slide {
+        0% {
+          opacity: 0;
+          transform: translateY(70%);
+        } 
+        100% {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+    }
+.About-header {
+    padding-top: 80px;
+    overflow:hidden;
+    margin-bottom: 50px;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+.Step-fade {
+    opacity: 0;
+    transform: translateY(100px);
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+.Step-fade-text {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+.Out-fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.StoryBanner-img {
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 0;
+    width:1920px; 
+    min-width: 100%;
+    max-width: none;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    height: 600px;
+    max-height: 260%;
+    min-height: 100%;
+}
+
+
+.Step-slide {
+    font-size: 50px;
+    line-height: 1.3em;
+    color: #000;
+    font-weight: bold;
+    display: block;
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+    transform: translateY(110%);
+    font-family:  "Noto Sans";
+}
+.Out-slide {
+    transform: translateY(0%);
+}
+@font-face {
+    font-family: "KRAFTON";
+    font-style: normal;
+    font-weight:400;
+    src: url("../fonts/KRAFTON_FONT.woff") format('woff');
+}
+.text-font{
+    font-family: 'KRAFTON';
+    font-size: 40px;
+}
+.value-para-font{
+    font-size: 30px;
+    line-height: 1.3em;
+    color: #000;
+    font-weight: 500;
+    font-family: "Noto Sans";
+    }
+.gover-values1{
+    position:absolute;
+    width: auto;
+    height: 700px;
+    transition-property: opacity;
+    transition-duration: 0.1s;
+    opacity: 1;
+    width: 335px;
+}
+.valuestory:hover .gover-values1{
+    opacity: 0;
+}
+.valuestory:hover .gover-values2{
+    opacity: 1;
+}
+.gover-values2{
+    position:absolute;
+    width: auto;
+    height: 100px;
+    width:28.5%;
+    transition-property: opacity;
+    transition-duration: 0.1s;
+    opacity: 0;
+}
+.gover-values2-title {
+    margin-bottom:18px;
+}
+.gv2-text{
+    font-size: 16px;
+    line-height: 1.7em;
+    color: #000;
+    font-family: "Noto Sans";
+
+} 
+.gv2-title {
+    font-size: 24px;
+    line-height: 1.3em;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 18px;
+    font-family: "Noto Sans";
+}
+.StorieStory{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+}
+.visionary{
+    display:flex;
+    justify-content: space-between;
+}
